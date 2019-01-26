@@ -120,6 +120,10 @@ public class BattlePhaseManager : MonoBehaviour
                 }
                 break;
 
+            case Phase.PLAYER_CHOICE:
+               
+                break;
+
         }
 
         
