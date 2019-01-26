@@ -1,9 +1,18 @@
+GobalGameJam2019/[Ll]ibrary/
+GobalGameJam2019/[Tt]emp/
+GobalGameJam2019/[Oo]bj/
+GobalGameJam2019/[Bb]uild/
+GobalGameJam2019/[Bb]uilds/
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+GobalGameJam2019/Assets/AssetStoreTools*
 Assets/AssetStoreTools*
+GobalGameJam2019/Assets/DaltonLikesGirls*
+Assets/DaltonLikesGirls*
 
 # Visual Studio cache directory
 .vs/
