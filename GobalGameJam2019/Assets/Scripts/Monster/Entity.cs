@@ -8,7 +8,8 @@ public class Entity : MonoBehaviour
 {
     private static float[,] elementMatrix = GetElementAdjacencyMatrix();
 
-    [SerializeField] private Element element;
+    [SerializeField] private String monsterName { get; }
+    [SerializeField] private Element element { get; }
     [SerializeField] private int hp;
     [SerializeField] private int maxHp;
     [SerializeField] private int damage;
@@ -25,10 +26,6 @@ public class Entity : MonoBehaviour
         
     }
 
-    public void playAnimation()
-    {
-        // TODO
-    }
 
     private static float[,] GetElementAdjacencyMatrix()
     {
@@ -57,5 +54,19 @@ public class Entity : MonoBehaviour
     public void TakeDamage(int damage)
     {
         this.hp -= damage;
+        gameObject.GetComponent<Animator>().SetTrigger("HIT");
+
+        if(this.hp <= 0)
+            gameObject.GetComponent<Animator>().SetTrigger("DIE");
+    }
+
+    public int GetMaxHP()
+    {
+        return maxHp;
+    }
+
+    public int GetHP()
+    {
+        return hp;
     }
 }
