@@ -1,15 +1,17 @@
-﻿
-using System;
+﻿using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 public enum Element { NORMIE = 0, FIRE = 1, WATER = 2, GRASS = 3 }
+
 
 public class Entity : MonoBehaviour
 {
     private static float[,] elementMatrix = GetElementAdjacencyMatrix();
 
-    [SerializeField] private String monsterName { get; }
-    [SerializeField] private Element element { get; }
+    public String monsterName;
+    public Element element;
+    public List<MoveInfo> moveList = new List<MoveInfo>();
     [SerializeField] private int hp;
     [SerializeField] private int maxHp;
     [SerializeField] private int damage;
