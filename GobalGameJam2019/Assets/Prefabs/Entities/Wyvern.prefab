@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8996756428509929876
+--- !u!1 &140114607298881239
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8517040977303457195}
-  - component: {fileID: 7988589418691256526}
+  - component: {fileID: 7443362393521173584}
+  - component: {fileID: 531765731631950392}
   m_Layer: 0
-  m_Name: Chimera
+  m_Name: Wyvern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8517040977303457195
+--- !u!4 &7443362393521173584
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8996756428509929876}
+  m_GameObject: {fileID: 140114607298881239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 503.68408, y: 167.37772, z: 208.57771}
+  m_LocalPosition: {x: 17.056843, y: 0, z: 15.274764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7988589418691256526
+--- !u!114 &531765731631950392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8996756428509929876}
+  m_GameObject: {fileID: 140114607298881239}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dba8e19e49b981145a193dbe8cbd1d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterName: Chimera
+  monsterName: Wyvern
   element: 0
   moveList:
   - move: {fileID: 11400000, guid: be6084acb095fa34bb7fcb0ffda5b0fa, type: 2}
@@ -55,7 +55,8 @@ MonoBehaviour:
   - move: {fileID: 11400000, guid: bd9f77c5b353bc44abfa687153e833f4, type: 2}
     animType: 2
     particleType: 1
-  prefab: {fileID: 1143712910, guid: b6d27d5cb32f3e0429c9ea98162a4395, type: 3}
+  prefab: {fileID: 104059650, guid: 4fff2e39aecebda40a6ec5a09c253528, type: 3}
+  initalYOffset: 6
   hp: 50
   maxHp: 50
   damage: 50
