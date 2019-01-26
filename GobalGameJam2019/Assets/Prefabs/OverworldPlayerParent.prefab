@@ -221,7 +221,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 11801870192822712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0ac8b0c5d21efa40a08bcdd699e0e4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 3786e9cfb8a7f8a4d9aeef31e325e892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &1317876725
@@ -509,22 +509,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 11801870279828949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b9425eb43455a4c80b18f0f83144fb, type: 3}
+  m_Script: {fileID: 11500000, guid: b305deaeed39c3c44a8d1a6e6db91010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 11801870192822715}
-  topFloorMaterial: {fileID: 2100000, guid: 9acdb6f15876fae4eb4cd50f5a3c924e, type: 2}
+  topFloorMaterial: {fileID: 0}
   midFloorMaterial: {fileID: 0}
-  topFloorStairsMaterial: {fileID: 2100000, guid: 4ce28d9ca474df34b89755afac617fa4,
-    type: 2}
-  topFloorObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  topFloorStairsMaterial: {fileID: 0}
+  topFloorObjects: []
 --- !u!1 &11801870286152566
 GameObject:
   m_ObjectHideFlags: 0
