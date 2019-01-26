@@ -31,20 +31,21 @@ public class TriggerActivatorComponent : MonoBehaviour
     {
         if (isPlayerInTrigger)
         {
-            if (isButtonTrigger && hasHitButton)
+            if (!isButtonTrigger || (isButtonTrigger && hasHitButton))
             {
-                GetComponent<GameEventComponent>();
+                GetComponent<GameEventComponent>().CallEvent();
             }
         }
     }
 
-    private void OnTriggerEnter(Collider otherCollider)
+    private void OnTriggerEnter(Collider other)
     {
-        if (otherCollider.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             isPlayerInTrigger = true;
         }
     }
+
 
     private void OnTriggerExit(Collider otherCollider)
     {
