@@ -1,0 +1,14 @@
+<dialogue>
+	<prompt id = "root" text="Hi! How are you">
+		<option action = "prompt" prompt = "good">Good</option>
+		<option action = "prompt" prompt = "bad">Awful</option>
+	</prompt>
+	<prompt id = "good" text="Glad to hear it!">
+		<option action = "exit">Thanks</option>
+		<option action = "exit">I hate you</option>
+	</prompt>
+	<prompt id = "bad" text="Let's battle nerd">
+		<option action = "battle">Ye</option>
+		<option action = "exit">Nah</option>
+	</prompt>
+</dialogue>
