@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartBattleEventComp : GameEventComponent
 {
@@ -24,5 +25,7 @@ public class StartBattleEventComp : GameEventComponent
         print("DE. DE. DEH DEH-DEH-DEH!");
         print("Deh neehhhhh, De-ne-ne-nehhhhhhhhh");
         print("dooooOooo, DOOOOOo Doooooo dooooooo");
+
+        SceneManager.LoadScene("new_arena");
     }
 }
