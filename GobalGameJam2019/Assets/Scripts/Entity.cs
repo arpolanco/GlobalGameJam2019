@@ -1,19 +1,22 @@
 ﻿
+using System;
 using UnityEngine;
+
+public enum Element { NORMIE = 0, FIRE = 1, WATER = 2, GRASS = 3 }
 
 public class Entity : MonoBehaviour
 {
-    private int hp, mp;
+    private static float[,] elementMatrix = GetElementAdjacencyMatrix();
 
-    public int maxHp, maxMp;
-    public int physicalDamage;
-    public int magicDamage;
+    [SerializeField] private Element element;
+    [SerializeField] private int hp;
+    [SerializeField] private int maxHp;
+    [SerializeField] private int damage;
 
     // Start is called before the first frame update
     void Start()
     {
-        hp = maxHp;
-        mp = maxMp;
+        
     }
 
     // Update is called once per frame
@@ -25,5 +28,34 @@ public class Entity : MonoBehaviour
     public void playAnimation()
     {
         // TODO
+    }
+
+    private static float[,] GetElementAdjacencyMatrix()
+    {
+        return new float[,]
+        {
+            { 1.0f, 1.0f, 1.0f, 1.0f },
+            { 1.0f, 1.0f, 0.5f, 2.0f },
+            { 1.0f, 2.0f, 1.0f, 0.5f },
+            { 1.0f, 0.5f, 2.0f, 1.0f }
+        };
+    }
+
+    private static int GetElementFactor(Entity a, Entity b)
+    {
+        int row = Convert.ToInt32(a.element);
+        int col = Convert.ToInt32(b.element);
+        return Convert.ToInt32(elementMatrix[row, col]);
+    }
+
+    public void Attack(Entity target)
+    {
+        int totalDamage = damage * GetElementFactor(this, target);
+        target.TakeDamage(totalDamage);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        this.hp -= damage;
     }
 }
