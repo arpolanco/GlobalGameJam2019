@@ -8,7 +8,7 @@ public class Party : MonoBehaviour
     public List<Entity> monsterList;
     public int selectedMonster = 0;
 
-    public void Start()
+    public void Awake()
     {
         LoadMonsters();
     }

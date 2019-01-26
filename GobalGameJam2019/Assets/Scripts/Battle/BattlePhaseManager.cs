@@ -21,12 +21,14 @@ public class BattlePhaseManager : MonoBehaviour
     private Entity mEnemyMonster;
     private Animator mPlayerAnim;
     private Animator mEnemyAnim;
+    private GameObject mGUI;
 
 
 
-
+    public Transform playerTransform, enemyTransform;
     public GameObject mPlayerMonsterMonsterInfo;
     public GameObject mEnemyMonsterMonsterInfo;
+    public bool inBattle = false;
 
 
     public Button[] mOptions;
@@ -34,7 +36,8 @@ public class BattlePhaseManager : MonoBehaviour
     void Start()
     {
         mCurrentPhase = Phase.PRE;
-        
+        mGUI = transform.Find("PhaseGui").gameObject;
+        mGUI.SetActive(false);
     }
 
 
@@ -56,6 +59,8 @@ public class BattlePhaseManager : MonoBehaviour
     {
         mPlayer= player;
         mEnemy = enemy;
+        SpawnMonster(player, playerTransform);
+        SpawnMonster(enemy, enemyTransform);
         mPlayerMonster = player.gameObject.GetComponent<Party>().GetEntity();
         mEnemyMonster = enemy.gameObject.GetComponent<Party>().GetEntity();
         mPlayerMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(mPlayerMonster);
@@ -63,9 +68,17 @@ public class BattlePhaseManager : MonoBehaviour
         mPlayerAnim = mPlayer.GetComponent<Party>().GetEntity().currentAnimator;
         mEnemyAnim = mEnemy.GetComponent<Party>().GetEntity().currentAnimator;
         SetupButtons();
+        mGUI.SetActive(true);
+        mCurrentPhase = Phase.BEGIN;
     }
 
- 
+    void SpawnMonster(GameObject trainer, Transform transform)
+    {
+        Party party = trainer.GetComponent<Party>();
+        GameObject go = Instantiate(party.GetEntity().prefab, transform.position + party.GetEntity().initalYOffset * Vector3.up, transform.rotation, null) as GameObject;
+        party.GetEntity().currentAnimator = go.GetComponent<Animator>();
+    }
+
     //may move this
     void UIControl()
     {
@@ -149,11 +162,19 @@ public class BattlePhaseManager : MonoBehaviour
         ++mCurrentPhase;
     }
 
+    void CheckDeath()
+    {
+        if (mPlayerMonster.GetHP() <= 0)
+            mCurrentPhase = Phase.PLAYER_SWITCH;
+
+        if (mEnemyMonster.GetHP() <= 0)
+            mCurrentPhase = Phase.ENEMY_SWITCH;
+    }
+
     // Update is called once per frame
     void Update()
     {
         
-
         //Allows us to test the other battle phases 
         if (Application.isEditor)
         {
@@ -166,28 +187,23 @@ public class BattlePhaseManager : MonoBehaviour
         }
 
 
-        if (mPlayerMonster.GetHP() <= 0)
-            mCurrentPhase = Phase.PLAYER_SWITCH;
-
-        if (mEnemyMonster.GetHP() <= 0)
-            mCurrentPhase = Phase.ENEMY_SWITCH;
+        
 
         switch (mCurrentPhase)
         {
             //Random screen wipe effect like in pokemon here if we have time
             //This will also be where music changes
             case Phase.PRE:
-                ++mCurrentPhase;
                 break;
 
             //Will do the camera transition here
             case Phase.BEGIN:
-
                 mCurrentPhase = Phase.PLAYER_CHOICE;
                 break;
 
             case Phase.PLAYER_CHOICE:
                 UIControl();
+                CheckDeath();
                 break;
 
             case Phase.PLAYER_ATTACK:
@@ -197,6 +213,7 @@ public class BattlePhaseManager : MonoBehaviour
 
             case Phase.OPPONENT_CHOICE:
                 AIControl();
+                CheckDeath();
                 break;
 
             case Phase.OPPONENT_ATTACK:

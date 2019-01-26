@@ -26,7 +26,8 @@ public class MonsterStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mResourceBar.SetCurrentResource(monster.GetHP());
+        if(monster != null)
+            mResourceBar.SetCurrentResource(monster.GetHP());
         
     }
 }
