@@ -1,15 +1,6 @@
 ﻿
 using UnityEngine;
 
-/*
-physical dmg
-magic dmg
-HP
-MP
-
-playAttackAnimation()
-*/
-
 public class Entity : MonoBehaviour
 {
     private int hp, mp;
