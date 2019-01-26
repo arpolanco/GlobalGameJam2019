@@ -10,9 +10,9 @@ public class DialogueHandler : MonoBehaviour
     public string dialogueFilename;
 
     //Local variables
-    IEnumerable<XElement> prompts;
-    XElement currentPrompt;
-    bool inDialogue = true;
+    private IEnumerable<XElement> prompts;
+    private XElement currentPrompt;
+    private bool inDialogue = true;
 
     // Verify and load file
     void Start()
