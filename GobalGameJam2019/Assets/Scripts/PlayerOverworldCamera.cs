@@ -8,21 +8,28 @@ public class PlayerOverworldCamera : MonoBehaviour
     private Transform playerTransform;
 
     [SerializeField]
-    List<GameObject> topFloorList = new List<GameObject>();
+    Material topFloorMaterial;
     
     [SerializeField]
-    List<GameObject> midFloorList = new List<GameObject>();
+    Material midFloorMaterial;
 
     [SerializeField]
-    GameObject topFloorStairs;
+    Material topFloorStairsMaterial;
+
+    [SerializeField]
+    List<GameObject> topFloorObjects = new List<GameObject>();
 
     private int currentFloor = 2;
 
     float targetStairAlpha = 1;
 
+    float targetFloorAlpha = 1;
+
     bool shouldUpdateStairs = false;
 
     float stairLerp = 0;
+
+    float floorLerp = 0;
 
     
     void Update()
@@ -32,8 +39,7 @@ public class PlayerOverworldCamera : MonoBehaviour
 
         CheckFloorLevel();
 
-        if (shouldUpdateStairs)
-            UpdateStairs(topFloorStairs);
+        UpdateMats();
     }
 
     // This whole system is a horrible mess...
@@ -42,49 +48,77 @@ public class PlayerOverworldCamera : MonoBehaviour
     {
         if (currentFloor == 2 && playerTransform.localPosition.y < 6.3f)
         {
-            HideFloors(topFloorList, false, topFloorStairs, .05f);
+            HideFloors(topFloorMaterial, topFloorObjects, false, topFloorStairsMaterial, 0, .25f);
             currentFloor = 1;
         }
         else if (currentFloor == 1 && playerTransform.localPosition.y > 6.38f)
         {
-            HideFloors(topFloorList, true, topFloorStairs, 1f);
+            HideFloors(topFloorMaterial, topFloorObjects, true, topFloorStairsMaterial, 1, 1);
             currentFloor = 2;
         }
     }
 
     
-    private void HideFloors(List<GameObject> floorList, bool floorsEnabled, GameObject stairs, float stairAlpha)
+    private void HideFloors(Material floorMat, List<GameObject> floorObjects, bool floorObjectStatus, Material stairs, float floorAlpha, float stairAlpha)
     {
-        for (int i = 0; i < floorList.Count; i++)
-        {
-            floorList[i].SetActive(floorsEnabled);
-        }
+
         targetStairAlpha = stairAlpha;
+        targetFloorAlpha = floorAlpha;
 
         shouldUpdateStairs = true;
+
+        for (int i = 0; i < floorObjects.Count; ++i)
+        {
+            floorObjects[i].SetActive(floorObjectStatus);
+        }
     }
 
-    private void UpdateStairs(GameObject stairs)
+    private void UpdateMats()
     {
-        Material stairMat = stairs.GetComponent<MeshRenderer>().material;
+        Material stairMat = topFloorStairsMaterial; 
         Color stairColor = stairMat.color;
-
-
         stairLerp = Time.deltaTime * 2f;
-
         if (stairColor.a != targetStairAlpha)
         {
             stairColor.a = Mathf.Lerp(stairColor.a, targetStairAlpha, stairLerp);
             stairMat.color = stairColor;
-            stairs.GetComponent<MeshRenderer>().material = stairMat;
         }
         else
         {
             stairLerp = targetStairAlpha;
+        }
+
+        Material floorMat = topFloorMaterial;
+        Color floorColor = floorMat.color;
+        floorLerp = Time.deltaTime * 2f;
+        if (floorColor.a != targetFloorAlpha)
+        {
+            floorColor.a = Mathf.Lerp(floorColor.a, targetFloorAlpha, floorLerp);
+            floorMat.color = floorColor;
+        }
+        else
+        {
+            floorLerp = targetFloorAlpha;
+        }
+
+        if (floorColor.a == targetFloorAlpha && stairColor.a == targetStairAlpha)
+        {
             shouldUpdateStairs = false;
         }
-            
-        
-        
+
+    }
+
+
+    private void OnDestroy()
+    {
+        Material floorMat = topFloorMaterial;
+        Color floorColor = floorMat.color;
+        floorColor.a = 1;
+        floorMat.color = floorColor;
+
+        Material stairMat = topFloorStairsMaterial;
+        Color stairColor = stairMat.color;
+        stairColor.a = 1;
+        stairMat.color = stairColor;
     }
 }
