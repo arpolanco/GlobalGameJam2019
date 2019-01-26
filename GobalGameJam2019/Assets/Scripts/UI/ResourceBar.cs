@@ -32,7 +32,7 @@ public class ResourceBar : MonoBehaviour
             SetCurrentResource(mCurResource + 10);
 
         if (mCurShakeDur >= 0) {
-            mCurShakeDur += Time.deltaTime;
+            mCurShakeDur += Time.deltaTime*5;
             mResourceForeground.localScale = Vector3.Lerp(mResourceForeground.localScale, new Vector3(mCurResource / mMaxResource, 1, 1), mCurShakeDur / 10);
             if (mReduced)
             {
@@ -40,12 +40,24 @@ public class ResourceBar : MonoBehaviour
             }
         }
 
+
+        if(mResourceForeground.localScale.x <= 0)
+        {
+            mResourceForeground.localScale = new Vector3(0, 1, 1);
+        }
+        
+
        
         
         
     }
 
-    void SetCurrentResource(float newresource)
+    public void SetMaxResource(float newmax)
+    {
+        mMaxResource = newmax;
+    }
+
+    public void SetCurrentResource(float newresource)
     {
         if(newresource < mCurResource)
         {
