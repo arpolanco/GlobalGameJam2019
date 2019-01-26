@@ -19,6 +19,8 @@ public class BattlePhaseManager : MonoBehaviour
     public GameObject mEnemy;
     private Entity mPlayerMonster;
     private Entity mEnemyMonster;
+    private Animator mPlayerAnim;
+    private Animator mEnemyAnim;
 
 
 
@@ -32,8 +34,7 @@ public class BattlePhaseManager : MonoBehaviour
     void Start()
     {
         mCurrentPhase = Phase.PRE;
-        StartBattle(mPlayer, mEnemy);
-        SetupButtons();
+        
     }
 
 
@@ -51,14 +52,17 @@ public class BattlePhaseManager : MonoBehaviour
     }
 
     //This will have info like current party member and such later but for now it will just use the one test monster
-    void StartBattle(GameObject player, GameObject enemy)
+    public void StartBattle(GameObject player, GameObject enemy)
     {
         mPlayer= player;
         mEnemy = enemy;
-        mPlayerMonster = player.gameObject.GetComponent<Party>().monsterList[0];
-        mEnemyMonster = enemy.gameObject.GetComponent<Party>().monsterList[0];
+        mPlayerMonster = player.gameObject.GetComponent<Party>().GetEntity();
+        mEnemyMonster = enemy.gameObject.GetComponent<Party>().GetEntity();
         mPlayerMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(mPlayerMonster);
         mEnemyMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(mEnemyMonster);
+        mPlayerAnim = mPlayer.GetComponent<Party>().GetEntity().currentAnimator;
+        mEnemyAnim = mEnemy.GetComponent<Party>().GetEntity().currentAnimator;
+        SetupButtons();
     }
 
  
@@ -68,6 +72,8 @@ public class BattlePhaseManager : MonoBehaviour
         PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
         pointerEventData.position = Input.mousePosition;
         List<RaycastResult> raycastResults = new List<RaycastResult>();
+
+
         EventSystem.current.RaycastAll(pointerEventData, raycastResults);
         foreach(RaycastResult res in raycastResults)
         {
@@ -85,17 +91,17 @@ public class BattlePhaseManager : MonoBehaviour
                     switch(button.mAction)
                     {
                         case ButtonAction.ATK1:
-                            mPlayerMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK1");
+                            mPlayerAnim.SetTrigger("ATK1");
                             mPlayerMonster.Attack(mEnemyMonster);
                             break;
 
                         case ButtonAction.ATK2:
-                            mPlayerMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK2");
+                            mPlayerAnim.SetTrigger("ATK2");
                             mPlayerMonster.Attack(mEnemyMonster);
                             break;
 
                         case ButtonAction.ATK3:
-                            mPlayerMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK3");
+                            mPlayerAnim.SetTrigger("ATK3");
                             mPlayerMonster.Attack(mEnemyMonster);
                             break;
 
@@ -124,17 +130,17 @@ public class BattlePhaseManager : MonoBehaviour
         switch (tmp)
         {
             case 0:
-                mEnemyMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK1");
+                mEnemyAnim.SetTrigger("ATK1");
                 mEnemyMonster.Attack(mPlayerMonster);
                 break;
 
             case 1:
-                mEnemyMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK2");
+                mEnemyAnim.SetTrigger("ATK2");
                 mEnemyMonster.Attack(mPlayerMonster);
                 break;
 
             case 2:
-                mEnemyMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK3");
+                mEnemyAnim.SetTrigger("ATK3");
                 mEnemyMonster.Attack(mPlayerMonster);
                 break;
 

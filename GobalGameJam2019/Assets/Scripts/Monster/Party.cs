@@ -6,6 +6,7 @@ using UnityEngine;
 public class Party : MonoBehaviour
 {
     public List<Entity> monsterList;
+    public int selectedMonster = 0;
 
     public void Start()
     {
@@ -18,5 +19,10 @@ public class Party : MonoBehaviour
         {
             monsterList.Add(entity);
         }
+    }
+
+    public Entity GetEntity()
+    {
+        return monsterList[selectedMonster];
     }
 }

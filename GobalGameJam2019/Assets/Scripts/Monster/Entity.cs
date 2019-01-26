@@ -12,9 +12,12 @@ public class Entity : MonoBehaviour
     public String monsterName;
     public Element element;
     public List<MoveInfo> moveList = new List<MoveInfo>();
+    public UnityEngine.Object prefab;
+    public float initalYOffset = 0;
     [SerializeField] private int hp;
     [SerializeField] private int maxHp;
     [SerializeField] private int damage;
+    public Animator currentAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -56,10 +59,10 @@ public class Entity : MonoBehaviour
     public void TakeDamage(int damage)
     {
         this.hp -= damage;
-        gameObject.GetComponent<Animator>().SetTrigger("HIT");
+        currentAnimator.SetTrigger("HIT");
 
         if(this.hp <= 0)
-            gameObject.GetComponent<Animator>().SetTrigger("DIE");
+            currentAnimator.SetTrigger("DIE");
     }
 
     public int GetMaxHP()
