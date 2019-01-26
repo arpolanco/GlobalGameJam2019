@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 //reference: https://www.youtube.com/watch?v=GIDz0DjhA4E
+
 public class AIWaypoints : MonoBehaviour
 {
-    public List<Transform> waypoints = new List<Transform>();
+    List<Transform> waypoints = new List<Transform>();
+    
     private Transform targetWaypoint;
+    public Transform origWay;
+ 
+
     private int targetWaypointIndex = 0;
     private float minDistance = 0.1f; //If the distance between the enemy and the waypoint is less than this, then it has reacehd the waypoint
     private int lastWaypointIndex;
@@ -13,9 +18,18 @@ public class AIWaypoints : MonoBehaviour
     public float movementSpeed = 1f;
     public float rotationSpeed = 1f;
 
+    public float timePauseBeforeWalking = 1f;
+    float timePause;
+    bool isWaiting = false;
+
     // Use this for initialization
     void Start()
     {
+        foreach(Transform t in origWay)
+        {
+            waypoints.Add(t);
+        }
+        timePause = timePauseBeforeWalking;
         lastWaypointIndex = waypoints.Count - 1;
         targetWaypoint = waypoints[targetWaypointIndex]; //Set the first target waypoint at the start so the enemy starts moving towards a waypoint
     }
@@ -28,16 +42,34 @@ public class AIWaypoints : MonoBehaviour
 
         Vector3 directionToTarget = targetWaypoint.position - transform.position;
         Quaternion rotationToTarget = Quaternion.LookRotation(directionToTarget);
+        if (!isWaiting)
+        {
+            
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotationToTarget, rotationStep);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotationToTarget, rotationStep);
 
-        Debug.DrawRay(transform.position, transform.forward * 50f, Color.green, 0f); //Draws a ray forward in the direction the enemy is facing
-        Debug.DrawRay(transform.position, directionToTarget, Color.red, 0f); //Draws a ray in the direction of the current target waypoint
+            Debug.DrawRay(transform.position, transform.forward * 50f, Color.green, 0f); //Draws a ray forward in the direction the enemy is facing
+            Debug.DrawRay(transform.position, directionToTarget, Color.red, 0f); //Draws a ray in the direction of the current target waypoint
 
-        float distance = Vector3.Distance(transform.position, targetWaypoint.position);
-        CheckDistanceToWaypoint(distance);
+            float distance = Vector3.Distance(transform.position, targetWaypoint.position);
+            CheckDistanceToWaypoint(distance);
 
-        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, movementStep);
+            transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, movementStep);
+        }
+        else
+        {
+            timePause -= Time.deltaTime;
+            rotationToTarget = Quaternion.LookRotation(directionToTarget);
+
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotationToTarget, rotationStep);
+            if (timePause < 0)
+            {
+                timePause = timePauseBeforeWalking;
+                isWaiting = false;
+            }
+                
+            
+        }
     }
 
     /// <summary>
@@ -61,8 +93,10 @@ public class AIWaypoints : MonoBehaviour
         if (targetWaypointIndex > lastWaypointIndex)
         {
             targetWaypointIndex = 0;
+            waypoints.Reverse();
         }
 
         targetWaypoint = waypoints[targetWaypointIndex];
+        isWaiting = true;
     }
 }
