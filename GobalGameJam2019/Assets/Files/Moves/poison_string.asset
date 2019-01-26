@@ -10,9 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5d3e53e6d56a834180cfb6360895597, type: 3}
-  m_Name: tmp
+  m_Name: poison_string
   m_EditorClassIdentifier: 
-  id: 
-  animation: 
+  id: Poison Sting
   particleEffect: 
-  effects: []
+  effects:
+  - element: 3
+    classification: 0
+    quantVal: 30
+    qualVal: 

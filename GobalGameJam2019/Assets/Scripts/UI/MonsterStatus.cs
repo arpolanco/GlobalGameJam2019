@@ -19,7 +19,7 @@ public class MonsterStatus : MonoBehaviour
     public void SetMonster(Entity Monster)
     {
         monster = Monster.GetComponent<Entity>();
-        gameObject.GetComponentInChildren<Text>().text = monster.name;
+        gameObject.GetComponentInChildren<Text>().text = monster.monsterName;
         mResourceBar.SetMaxResource(monster.GetMaxHP());
 
     }
