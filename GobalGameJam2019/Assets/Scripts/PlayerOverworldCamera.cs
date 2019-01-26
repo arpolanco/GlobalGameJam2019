@@ -40,6 +40,7 @@ public class PlayerOverworldCamera : MonoBehaviour
         CheckFloorLevel();
 
         UpdateMats();
+
     }
 
     // This whole system is a horrible mess...
