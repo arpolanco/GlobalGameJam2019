@@ -17,8 +17,8 @@ public class BattlePhaseManager : MonoBehaviour
     //this will be set at the start of any battle
     public GameObject mPlayer;
     public GameObject mEnemy;
-    public GameObject mPlayerMonster;
-    public GameObject mEnemyMonster;
+    private Entity mPlayerMonster;
+    private Entity mEnemyMonster;
 
 
 
@@ -26,10 +26,28 @@ public class BattlePhaseManager : MonoBehaviour
     public GameObject mPlayerMonsterMonsterInfo;
     public GameObject mEnemyMonsterMonsterInfo;
 
+
+    public Button[] mOptions;
+
     void Start()
     {
         mCurrentPhase = Phase.PRE;
-        StartBattle(mPlayerMonster, mEnemyMonster);
+        StartBattle(mPlayer, mEnemy);
+        SetupButtons();
+    }
+
+
+    void SetupButtons()
+    {
+        int i = 0;
+        foreach(Button b in mOptions)
+        {
+            Move move = mPlayerMonster.moveList[i].move;
+            b.mText = move.id;
+            b.mElement = move.effects[0].element;
+            b.mAction = (ButtonAction)i;
+            ++i;
+        }
     }
 
     //This will have info like current party member and such later but for now it will just use the one test monster
@@ -37,12 +55,13 @@ public class BattlePhaseManager : MonoBehaviour
     {
         mPlayer= player;
         mEnemy = enemy;
-        mPlayerMonster = player;
-        mEnemyMonster = enemy;
-        mPlayerMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(player.GetComponent<Entity>());
-        mEnemyMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(enemy.GetComponent<Entity>());
+        mPlayerMonster = player.gameObject.GetComponent<Party>().monsterList[0];
+        mEnemyMonster = enemy.gameObject.GetComponent<Party>().monsterList[0];
+        mPlayerMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(mPlayerMonster);
+        mEnemyMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(mEnemyMonster);
     }
 
+ 
     //may move this
     void UIControl()
     {
@@ -66,18 +85,18 @@ public class BattlePhaseManager : MonoBehaviour
                     switch(button.mAction)
                     {
                         case ButtonAction.ATK1:
-                            mPlayerMonster.GetComponent<Animator>().SetTrigger("ATK1");
-                            mPlayerMonster.GetComponent<Entity>().Attack(mEnemyMonster.GetComponent<Entity>());
+                            mPlayerMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK1");
+                            mPlayerMonster.Attack(mEnemyMonster);
                             break;
 
                         case ButtonAction.ATK2:
-                            mPlayerMonster.GetComponent<Animator>().SetTrigger("ATK2");
-                            mPlayerMonster.GetComponent<Entity>().Attack(mEnemyMonster.GetComponent<Entity>());
+                            mPlayerMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK2");
+                            mPlayerMonster.Attack(mEnemyMonster);
                             break;
 
                         case ButtonAction.ATK3:
-                            mPlayerMonster.GetComponent<Animator>().SetTrigger("ATK3");
-                            mPlayerMonster.GetComponent<Entity>().Attack(mEnemyMonster.GetComponent<Entity>());
+                            mPlayerMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK3");
+                            mPlayerMonster.Attack(mEnemyMonster);
                             break;
 
                         case ButtonAction.SWAP:
@@ -105,18 +124,18 @@ public class BattlePhaseManager : MonoBehaviour
         switch (tmp)
         {
             case 0:
-                mEnemyMonster.GetComponent<Animator>().SetTrigger("ATK1");
-                mEnemyMonster.GetComponent<Entity>().Attack(mPlayerMonster.GetComponent<Entity>());
+                mEnemyMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK1");
+                mEnemyMonster.Attack(mPlayerMonster);
                 break;
 
             case 1:
-                mEnemyMonster.GetComponent<Animator>().SetTrigger("ATK2");
-                mEnemyMonster.GetComponent<Entity>().Attack(mPlayerMonster.GetComponent<Entity>());
+                mEnemyMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK2");
+                mEnemyMonster.Attack(mPlayerMonster);
                 break;
 
             case 2:
-                mEnemyMonster.GetComponent<Animator>().SetTrigger("ATK3");
-                mEnemyMonster.GetComponent<Entity>().Attack(mPlayerMonster.GetComponent<Entity>());
+                mEnemyMonster.transform.gameObject.GetComponent<Animator>().SetTrigger("ATK3");
+                mEnemyMonster.Attack(mPlayerMonster);
                 break;
 
 
@@ -132,7 +151,7 @@ public class BattlePhaseManager : MonoBehaviour
         //Allows us to test the other battle phases 
         if (Application.isEditor)
         {
-            Debug.Log(mCurrentPhase);
+            //Debug.Log(mCurrentPhase);
 
             if (Input.GetKeyDown(KeyCode.N))
                 ++mCurrentPhase;
@@ -141,10 +160,10 @@ public class BattlePhaseManager : MonoBehaviour
         }
 
 
-        if (mPlayerMonster.GetComponent<Entity>().GetHP() <= 0)
+        if (mPlayerMonster.GetHP() <= 0)
             mCurrentPhase = Phase.PLAYER_SWITCH;
 
-        if (mEnemyMonster.GetComponent<Entity>().GetHP() <= 0)
+        if (mEnemyMonster.GetHP() <= 0)
             mCurrentPhase = Phase.ENEMY_SWITCH;
 
         switch (mCurrentPhase)
