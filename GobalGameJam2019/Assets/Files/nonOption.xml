@@ -1,0 +1,5 @@
+<dialogue>
+	<prompt id = "root" text="Hi! How are you">
+		<foo/>
+	</prompt>
+</dialogue>

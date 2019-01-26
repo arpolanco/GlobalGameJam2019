@@ -1,0 +1,4 @@
+<dialogue>
+	<prompt id="foo" text="bar">
+	</prompt>
+</dialogue>
