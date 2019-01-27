@@ -294,5 +294,7 @@ public class BattlePhaseManager : MonoBehaviour
         DespawnMonster(mPlayerMonster);
         DespawnMonster(mEnemyMonster);
         mCurrentPhase = Phase.PRE;
+        GamePersistantData.Instance.mAudio.clip = GamePersistantData.Instance.worldClip;
+        GamePersistantData.Instance.mAudio.Play();
     }
 }

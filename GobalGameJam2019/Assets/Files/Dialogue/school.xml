@@ -1,0 +1,12 @@
+<dialogue>
+	<prompt id = "root" text="Don’t come to school tomorrow.">
+		<option action = "battle">Yeah I’m calling the police after this battle.</option>
+	</prompt>
+
+	<prompt id = "battle_won" text="I didn't mean it! It was a gamer joke!">
+		<option action = "exit">*walks away* This is not funny.</option>
+	</prompt>
+	<prompt id = "battle_lost" text="You're lucky I like you">
+		<option action = "exit">I'm calling the police. </option>
+	</prompt>
+</dialogue>

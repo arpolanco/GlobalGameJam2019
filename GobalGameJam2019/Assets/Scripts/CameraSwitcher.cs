@@ -15,5 +15,7 @@ public static class CameraSwitcher
         GameObject.Find("OverworldCamera").GetComponent<Camera>().enabled = false;
         GameObject.Find("ArenaCamera").GetComponent<Camera>().enabled = true;
         GameObject.Find("ArenaCamera").GetComponentInChildren<Light>().enabled = true;
+
+
     }
 }
