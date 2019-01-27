@@ -16,7 +16,7 @@ public class Entity : MonoBehaviour
     public float initalYOffset = 0;
     [SerializeField] private int hp;
     [SerializeField] private int maxHp;
-    [SerializeField] private int damage;
+    [SerializeField] public int damage;
     public Animator currentAnimator;
 
     // Start is called before the first frame update

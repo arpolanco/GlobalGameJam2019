@@ -9,12 +9,11 @@ Shader "Toon/Basic" {
 
 
 	SubShader {
-		Tags { "RenderType"="Opaque" }
-		Pass {
-			Name "BASE"
-			Cull Off
-			
-			CGPROGRAM
+		Tags { "RenderType" = "Opaque" "Queue" = "Transparent" }
+		 Pass {
+			 Name "BASE"
+			 Blend SrcAlpha OneMinusSrcAlpha
+			 CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
 			#pragma multi_compile_fog
@@ -60,6 +59,18 @@ Shader "Toon/Basic" {
 			ENDCG			
 		}
 	} 
-
+		SubShader{
+		 Tags { "RenderType" = "Opaque" "Queue" = "Transparent"}
+		 Pass {
+			 Name "BASE"
+			 SetTexture[_MainTex] {
+				 constantColor[_Color]
+				 Combine texture * constant
+			 }
+			 SetTexture[_ToonShade] {
+				 combine texture * previous DOUBLE, previous
+			 }
+		 }
+			}
 	Fallback "VertexLit"
 }
