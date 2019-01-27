@@ -32,8 +32,8 @@ public class ResourceBar : MonoBehaviour
             SetCurrentResource(mCurResource + 10);
 
         if (mCurShakeDur >= 0) {
-            mCurShakeDur += Time.deltaTime*5;
-            mResourceForeground.localScale = Vector3.Lerp(mResourceForeground.localScale, new Vector3(mCurResource / mMaxResource, 1, 1), mCurShakeDur / 10);
+            mCurShakeDur += Time.deltaTime*10;
+            mResourceForeground.localScale = Vector3.Lerp(mResourceForeground.localScale, new Vector3(mCurResource / mMaxResource, 1, 1), mCurShakeDur / 2);
             if (mReduced)
             {
                 //shake here
