@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public enum Phase {PRE,BEGIN, PLAYER_CHOICE, PLAYER_ATTACK, OPPONENT_CHOICE, OPPONENT_ATTACK, ENEMY_SWITCH, PLAYER_SWITCH, PLAYER_DEATH, ENEMY_DEATH };
 
@@ -22,6 +23,7 @@ public class BattlePhaseManager : MonoBehaviour
     private Animator mPlayerAnim;
     private Animator mEnemyAnim;
     private GameObject mGUI;
+    private int playerLosses, enemyLosses;
 
 
 
@@ -61,15 +63,10 @@ public class BattlePhaseManager : MonoBehaviour
         mEnemy = enemy;
         SpawnMonster(player, playerTransform);
         SpawnMonster(enemy, enemyTransform);
-        mPlayerMonster = player.gameObject.GetComponent<Party>().GetEntity();
-        mEnemyMonster = enemy.gameObject.GetComponent<Party>().GetEntity();
-        mPlayerMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(mPlayerMonster);
-        mEnemyMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(mEnemyMonster);
-        mPlayerAnim = mPlayer.GetComponent<Party>().GetEntity().currentAnimator;
-        mEnemyAnim = mEnemy.GetComponent<Party>().GetEntity().currentAnimator;
-        SetupButtons();
-        mGUI.SetActive(true);
+        NewMonsterInit();
         mCurrentPhase = Phase.BEGIN;
+        playerLosses = 0;
+        enemyLosses = 0;
     }
 
     void SpawnMonster(GameObject trainer, Transform transform)
@@ -77,6 +74,27 @@ public class BattlePhaseManager : MonoBehaviour
         Party party = trainer.GetComponent<Party>();
         GameObject go = Instantiate(party.GetEntity().prefab, transform.position + party.GetEntity().initalYOffset * Vector3.up, transform.rotation, null) as GameObject;
         party.GetEntity().currentAnimator = go.GetComponent<Animator>();
+    }
+
+    void DespawnMonster(Entity entity)
+    {
+        if(entity.currentAnimator != null)
+        {
+            DestroyImmediate(entity.currentAnimator.gameObject);
+            entity.currentAnimator = null;
+        }
+    }
+
+    void NewMonsterInit()
+    {
+        mPlayerMonster = mPlayer.gameObject.GetComponent<Party>().GetEntity();
+        mEnemyMonster = mEnemy.gameObject.GetComponent<Party>().GetEntity();
+        mPlayerMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(mPlayerMonster);
+        mEnemyMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(mEnemyMonster);
+        mPlayerAnim = mPlayer.GetComponent<Party>().GetEntity().currentAnimator;
+        mEnemyAnim = mEnemy.GetComponent<Party>().GetEntity().currentAnimator;
+        SetupButtons();
+        mGUI.SetActive(true);
     }
 
     //may move this
@@ -127,7 +145,7 @@ public class BattlePhaseManager : MonoBehaviour
                     }
 
                     if (hasAttacked)
-                        mCurrentPhase = Phase.OPPONENT_CHOICE;
+                        mCurrentPhase = Phase.PLAYER_ATTACK;
 
                 }
 
@@ -166,30 +184,21 @@ public class BattlePhaseManager : MonoBehaviour
     void CheckDeath()
     {
         if (mPlayerMonster.GetHP() <= 0)
+        {
             mCurrentPhase = Phase.PLAYER_SWITCH;
-
+            playerLosses++;
+        }
         if (mEnemyMonster.GetHP() <= 0)
+        {
             mCurrentPhase = Phase.ENEMY_SWITCH;
+            enemyLosses++;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        //Allows us to test the other battle phases 
-        if (Application.isEditor)
-        {
-            Debug.Log(mCurrentPhase);
-
-            if (Input.GetKeyDown(KeyCode.N))
-                ++mCurrentPhase;
-            if (mCurrentPhase > Phase.OPPONENT_ATTACK)
-                mCurrentPhase = Phase.BEGIN;
-        }
-
-
-        
-
+        print(mCurrentPhase);
         switch (mCurrentPhase)
         {
             //Random screen wipe effect like in pokemon here if we have time
@@ -220,26 +229,48 @@ public class BattlePhaseManager : MonoBehaviour
             case Phase.OPPONENT_CHOICE:
                 if (mPlayerAnim.GetCurrentAnimatorStateInfo(0).IsName("idle") && mEnemyAnim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
                 {
-                    if(!mPlayerAnim.IsInTransition(0) && !mEnemyAnim.IsInTransition(0))
+                    if (!mPlayerAnim.IsInTransition(0) && !mEnemyAnim.IsInTransition(0))
                         AIControl();
                 }
                 break;
 
             case Phase.OPPONENT_ATTACK:
                 mCurrentPhase = Phase.PLAYER_CHOICE;
-                CheckDeath();     
+                CheckDeath();
                 break;
 
             case Phase.ENEMY_SWITCH:
+                if (enemyLosses >= mEnemy.GetComponent<Party>().monsterList.Count)
+                    mCurrentPhase = Phase.ENEMY_DEATH;
+                else
+                {
+                    DespawnMonster(mEnemyMonster);
+                    mEnemy.GetComponent<Party>().selectedMonster++;
+                    SpawnMonster(mEnemy, enemyTransform);
+                    NewMonsterInit();
+                    mCurrentPhase = Phase.OPPONENT_CHOICE;
+                }
                 break;
 
             case Phase.PLAYER_SWITCH:
+                if (playerLosses >= mPlayer.GetComponent<Party>().monsterList.Count)
+                    mCurrentPhase = Phase.PLAYER_DEATH;
+                else
+                {
+                    DespawnMonster(mPlayerMonster);
+                    mPlayer.GetComponent<Party>().selectedMonster++;
+                    SpawnMonster(mPlayer, playerTransform);
+                    NewMonsterInit();
+                    mCurrentPhase = Phase.PLAYER_CHOICE;
+                }
                 break;
 
             case Phase.PLAYER_DEATH:
+                EndBattle(false);
                 break;
 
             case Phase.ENEMY_DEATH:
+                EndBattle(true);
                 break;
 
             
@@ -251,5 +282,13 @@ public class BattlePhaseManager : MonoBehaviour
         
     }
 
-    
+
+    void EndBattle(bool playerWon)
+    {
+        GamePersistantData.Instance.playerWon = playerWon;
+        mGUI.SetActive(false);
+        GameObject.FindGameObjectWithTag("Enemy").GetComponent<DialogueHandler>().OpenPrompt(playerWon ? "battle_lost" : "battle_won");
+        CameraSwitcher.UseOverworldCamera();
+        mCurrentPhase = Phase.PRE;
+    }
 }

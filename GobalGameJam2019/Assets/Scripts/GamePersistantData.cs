@@ -5,10 +5,10 @@ using UnityEngine;
 public class GamePersistantData : Singleton<GamePersistantData>
 {
     [SerializeField]
-    GameObject playerObject;
+    public GameObject playerObject;
 
     [SerializeField]
-    public Party playerParty;       // this doesn't 
+    public GameObject enemyObject;
 
     private Transform playerTransformPreBattle;
 
@@ -17,7 +17,12 @@ public class GamePersistantData : Singleton<GamePersistantData>
 
     private List<Transform> worldNPCStoredTransforms = new List<Transform>();
 
+    public bool playerWon = false;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void StorePreBattleData()
     {
@@ -27,6 +32,16 @@ public class GamePersistantData : Singleton<GamePersistantData>
         }
 
         playerTransformPreBattle = playerObject.transform;
+        playerObject.transform.parent = null;
+        DontDestroyOnLoad(playerObject);
+        playerObject.SetActive(false);
+    }
+
+    public void StoreEnemyData(GameObject enemy)
+    {
+        enemyObject = enemy;
+        DontDestroyOnLoad(enemyObject);
+        enemyObject.SetActive(false);
     }
 
     public void SetPostBattleWorldData()

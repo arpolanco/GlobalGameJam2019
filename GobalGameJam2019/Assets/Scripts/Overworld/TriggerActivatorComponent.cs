@@ -13,6 +13,8 @@ public class TriggerActivatorComponent : MonoBehaviour
     
     private GameEventComponent gameEventComp;
 
+    private bool hasBeenTriggered = false;
+
 
     // TODO: Won't need this later. Keeping it to retain logic. Replace with Input later
     private bool hasHitButton = false;
@@ -32,9 +34,10 @@ public class TriggerActivatorComponent : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.Return))
         if (isPlayerInTrigger)
         {
-            if (!isButtonTrigger || (isButtonTrigger && hasHitButton))
+            if (!hasBeenTriggered && (!isButtonTrigger || (isButtonTrigger && hasHitButton)))
             {
                 GetComponent<GameEventComponent>().CallEvent();
+                hasBeenTriggered = true;
             }
         }
     }
@@ -53,6 +56,7 @@ public class TriggerActivatorComponent : MonoBehaviour
         if (otherCollider.CompareTag("Player"))
         {
             isPlayerInTrigger = false;
+            hasBeenTriggered = false;
         }
     }
 }
