@@ -56,6 +56,9 @@ MonoBehaviour:
     animType: 2
     particleType: 1
   prefab: {fileID: 1143712910, guid: b6d27d5cb32f3e0429c9ea98162a4395, type: 3}
+  initalYOffset: 0
   hp: 50
   maxHp: 50
   damage: 50
+  currentAnimator: {fileID: 0}
+  icon: {fileID: 21300000, guid: aac3bb7edd3121d449ebdc57ecdc0fee, type: 3}

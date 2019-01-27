@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterName: Tree Boi
-  element: 0
+  element: 3
   moveList:
   - move: {fileID: 11400000, guid: be6084acb095fa34bb7fcb0ffda5b0fa, type: 2}
     animType: 0
@@ -60,3 +60,5 @@ MonoBehaviour:
   hp: 50
   maxHp: 50
   damage: 50
+  currentAnimator: {fileID: 0}
+  icon: {fileID: 21300000, guid: d603f8dd151ed0540887df09969af2b7, type: 3}
