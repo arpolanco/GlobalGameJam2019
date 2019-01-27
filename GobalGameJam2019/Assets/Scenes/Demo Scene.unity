@@ -34909,5 +34909,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2067052264916092705, guid: ef7b9ff0f63bbcd4ea6bc1d4cde0c11e,
+        type: 3}
+      propertyPath: m_Name
+      value: Slot
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3229283503441696135, guid: ef7b9ff0f63bbcd4ea6bc1d4cde0c11e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ef7b9ff0f63bbcd4ea6bc1d4cde0c11e, type: 3}
