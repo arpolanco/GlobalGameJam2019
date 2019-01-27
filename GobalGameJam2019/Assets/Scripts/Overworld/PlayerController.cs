@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Sprint"))
         {
-            walkSpeed = 50;
+            walkSpeed = 8;
         }
         else if (Input.GetButtonUp("Sprint"))
         {
