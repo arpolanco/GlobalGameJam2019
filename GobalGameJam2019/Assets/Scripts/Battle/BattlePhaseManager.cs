@@ -288,6 +288,7 @@ public class BattlePhaseManager : MonoBehaviour
     {
         GamePersistantData.Instance.playerWon = playerWon;
         mGUI.SetActive(false);
+        mEnemy.GetComponent<Party>().isDefeated = playerWon;
         GameObject.FindGameObjectWithTag("Enemy").GetComponent<DialogueHandler>().OpenPrompt(playerWon ? "battle_lost" : "battle_won");
         CameraSwitcher.UseOverworldCamera();
         DespawnMonster(mPlayerMonster);

@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 currentWalkingDirection = new Vector3(1, 0, 0);
 
+    public int currency = 50;
+
     // Start is called before the first frame update
     void Start()
     {
