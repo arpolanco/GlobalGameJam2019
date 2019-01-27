@@ -19,6 +19,9 @@ public class Entity : MonoBehaviour
     [SerializeField] public int damage;
     public Animator currentAnimator;
 
+    [SerializeField] public Sprite icon;
+
+
     // Start is called before the first frame update
     void Start()
     {
