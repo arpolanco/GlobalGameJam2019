@@ -35,7 +35,7 @@ public class PlayerOverworldCamera : MonoBehaviour
     void Update()
     {
         // Update camera position
-        transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y + 13.9f, playerTransform.position.z - 4.63f);
+        transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y + 8.9f, playerTransform.position.z - 4.63f);
 
         CheckFloorLevel();
 
