@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Xml.Linq;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class DialogueHandler : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class DialogueHandler : MonoBehaviour
     //Local variables
     private IEnumerable<XElement> prompts;
     private XElement currentPrompt;
-    private bool inDialogue = true;
+    private bool inDialogue = false;
 
     // Verify and load file
     void Start()
@@ -55,13 +56,30 @@ public class DialogueHandler : MonoBehaviour
                             inDialogue = false;
                             break;
                         case "battle":
-                            print("Battle!");
+                            CameraSwitcher.UseArenaCamera();
+                            GameObject player = GameObject.FindGameObjectWithTag("Player");
+                            gameObject.tag = "Enemy";
+                            GameObject.Find("BattlePhaseController").GetComponent<BattlePhaseManager>().StartBattle(player, gameObject);
+                            //GamePersistantData.Instance.StorePreBattleData();
+                            //GamePersistantData.Instance.StoreEnemyData(gameObject);
                             inDialogue = false;
+                            //SceneManager.LoadScene("new_arena");
                             break;
                     }
                 }
                 i++;
             }
         }
+    }
+
+    public void StartDialogue()
+    {
+        inDialogue = true;
+    }
+
+    public void OpenPrompt(string s)
+    {
+        inDialogue = true;
+        currentPrompt = prompts.Where(x => x.Attribute("id").Value == s).First();
     }
 }

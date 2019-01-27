@@ -11,4 +11,10 @@
 		<option action = "battle">Ye</option>
 		<option action = "exit">Nah</option>
 	</prompt>
+	<prompt id = "battle_won" text="u suck">
+		<option action = "exit">Nah</option>
+	</prompt>
+	<prompt id = "battle_lost" text="but i am god">
+		<option action = "exit">Nah</option>
+	</prompt>
 </dialogue>
