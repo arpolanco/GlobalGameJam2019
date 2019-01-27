@@ -4,25 +4,30 @@ using UnityEngine;
 
 public class PlayerParty : MonoBehaviour
 {
-    public List<Entity> monsterInventory;
-    public List<Entity> party;
+    public List<Entity> monsterInventory = new List<Entity>();
+    public List<Entity> party = new List<Entity>();
+
+    public Entity test;
     // Start is called before the first frame update
     void Start()
     {
-        party = new List<Entity>();
-        for(int i = 0; i < 3; ++i)
-        {
-            if (monsterInventory[i] != null)
-            {
-                party.Add(monsterInventory[i]);
-                monsterInventory.RemoveAt(i);
-            }
-        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    }
+
+    public void AddMonster(Entity e)
+    {
+        if(party.Count < 3)
+        {
+            party.Add(e);
+        }
+        else
+        {
+            monsterInventory.Add(e);
+        }
     }
 }
