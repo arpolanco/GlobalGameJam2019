@@ -494,10 +494,13 @@ MonoBehaviour:
   mEnemy: {fileID: 0}
   playerTransform: {fileID: 0}
   enemyTransform: {fileID: 0}
-  mPlayerMonsterMonsterInfo: {fileID: 0}
-  mEnemyMonsterMonsterInfo: {fileID: 0}
+  mPlayerMonsterMonsterInfo: {fileID: 1358899446206029112}
+  mEnemyMonsterMonsterInfo: {fileID: 1358899445559991055}
   inBattle: 0
-  mOptions: []
+  mOptions:
+  - {fileID: 324272429381618153}
+  - {fileID: 8037698100037229737}
+  - {fileID: 5945219759998606240}
 --- !u!1 &1358899446206029112
 GameObject:
   m_ObjectHideFlags: 0
