@@ -73,8 +73,32 @@ public class Entity : MonoBehaviour
         return maxHp;
     }
 
+    public void SetMaxHP(int val)
+    {
+        maxHp = val;
+        hp = maxHp;
+    }
+
     public int GetHP()
     {
         return hp;
+    }
+
+    public void CopyData(Entity e)
+    {
+        monsterName = e.monsterName;
+        element = e.element;
+        moveList = new List<MoveInfo>();
+        prefab = e.prefab;
+        initalYOffset = e.initalYOffset;
+        hp = e.hp;
+        maxHp = e.GetMaxHP();
+        damage = e.damage;
+        currentAnimator = null;
+        foreach (MoveInfo m in e.moveList)
+        {
+            moveList.Add(m);
+        }
+        icon = e.icon;
     }
 }

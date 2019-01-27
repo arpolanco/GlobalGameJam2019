@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-public enum Phase {PRE,BEGIN, PLAYER_CHOICE, PLAYER_ATTACK, OPPONENT_CHOICE, OPPONENT_ATTACK, ENEMY_SWITCH, PLAYER_SWITCH, PLAYER_DEATH, ENEMY_DEATH };
+public enum Phase { PRE, BEGIN, PLAYER_CHOICE, PLAYER_ATTACK, OPPONENT_CHOICE, OPPONENT_ATTACK, ENEMY_SWITCH, PLAYER_SWITCH, PLAYER_DEATH, ENEMY_DEATH };
 
 
 public class BattlePhaseManager : MonoBehaviour
@@ -47,7 +47,7 @@ public class BattlePhaseManager : MonoBehaviour
     void SetupButtons()
     {
         int i = 0;
-        foreach(Button b in mOptions)
+        foreach (Button b in mOptions)
         {
             Move move = mPlayerMonster.moveList[i].move;
             b.mText = move.id;
@@ -60,13 +60,13 @@ public class BattlePhaseManager : MonoBehaviour
     //This will have info like current party member and such later but for now it will just use the one test monster
     public void StartBattle(GameObject player, GameObject enemy)
     {
-        mPlayer= player;
+        mPlayer = player;
         mEnemy = enemy;
-        SpawnMonster(player, playerTransform);
+        SpawnPlayerMonster(player, playerTransform);
         SpawnMonster(enemy, enemyTransform);
         NewMonsterInit();
         mCurrentPhase = Phase.BEGIN;
-        playerLosses = mPlayer.GetComponent<Party>().monsterList.Where(x => x.GetHP() == 0).Count();
+        playerLosses = mPlayer.GetComponent<PlayerParty>().party.Where(x => x.GetHP() == 0).Count();
         enemyLosses = mEnemy.GetComponent<Party>().monsterList.Where(x => x.GetHP() == 0).Count();
     }
 
@@ -77,9 +77,16 @@ public class BattlePhaseManager : MonoBehaviour
         party.GetEntity().currentAnimator = go.GetComponent<Animator>();
     }
 
+    void SpawnPlayerMonster(GameObject trainer, Transform transform)
+    {
+        PlayerParty party = trainer.GetComponent<PlayerParty>();
+        GameObject go = Instantiate(party.GetEntity().prefab, transform.position + party.GetEntity().initalYOffset * Vector3.up, transform.rotation, null) as GameObject;
+        party.GetEntity().currentAnimator = go.GetComponent<Animator>();
+    }
+
     void DespawnMonster(Entity entity)
     {
-        if(entity.currentAnimator != null)
+        if (entity.currentAnimator != null)
         {
             DestroyImmediate(entity.currentAnimator.gameObject);
             entity.currentAnimator = null;
@@ -88,11 +95,11 @@ public class BattlePhaseManager : MonoBehaviour
 
     void NewMonsterInit()
     {
-        mPlayerMonster = mPlayer.gameObject.GetComponent<Party>().GetEntity();
+        mPlayerMonster = mPlayer.gameObject.GetComponent<PlayerParty>().GetEntity();
         mEnemyMonster = mEnemy.gameObject.GetComponent<Party>().GetEntity();
         mPlayerMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(mPlayerMonster);
         mEnemyMonsterMonsterInfo.GetComponent<MonsterStatus>().SetMonster(mEnemyMonster);
-        mPlayerAnim = mPlayer.GetComponent<Party>().GetEntity().currentAnimator;
+        mPlayerAnim = mPlayer.GetComponent<PlayerParty>().GetEntity().currentAnimator;
         mEnemyAnim = mEnemy.GetComponent<Party>().GetEntity().currentAnimator;
         SetupButtons();
         mGUI.SetActive(true);
@@ -107,7 +114,7 @@ public class BattlePhaseManager : MonoBehaviour
 
 
         EventSystem.current.RaycastAll(pointerEventData, raycastResults);
-        foreach(RaycastResult res in raycastResults)
+        foreach (RaycastResult res in raycastResults)
         {
             if (res.gameObject.GetComponent<Button>() != null)
             {
@@ -120,7 +127,7 @@ public class BattlePhaseManager : MonoBehaviour
                     button.Click();
 
                     //ACTUAL ATTACK Stuff
-                    switch(button.mAction)
+                    switch (button.mAction)
                     {
                         case ButtonAction.ATK1:
                             mPlayerAnim.SetTrigger("ATK1");
@@ -157,7 +164,7 @@ public class BattlePhaseManager : MonoBehaviour
 
     void AIControl()
     {
- 
+
         int tmp = Random.Range(0, 3);
         switch (tmp)
         {
@@ -179,7 +186,7 @@ public class BattlePhaseManager : MonoBehaviour
 
         }
         ++mCurrentPhase;
-        
+
     }
 
     void CheckDeath()
@@ -199,7 +206,6 @@ public class BattlePhaseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(mCurrentPhase);
         switch (mCurrentPhase)
         {
             //Random screen wipe effect like in pokemon here if we have time
@@ -254,13 +260,13 @@ public class BattlePhaseManager : MonoBehaviour
                 break;
 
             case Phase.PLAYER_SWITCH:
-                if (playerLosses >= mPlayer.GetComponent<Party>().monsterList.Count)
+                if (playerLosses >= mPlayer.GetComponent<PlayerParty>().party.Count)
                     mCurrentPhase = Phase.PLAYER_DEATH;
                 else
                 {
                     DespawnMonster(mPlayerMonster);
                     mPlayer.GetComponent<Party>().selectedMonster++;
-                    SpawnMonster(mPlayer, playerTransform);
+                    SpawnPlayerMonster(mPlayer, playerTransform);
                     NewMonsterInit();
                     mCurrentPhase = Phase.PLAYER_CHOICE;
                 }
@@ -274,13 +280,13 @@ public class BattlePhaseManager : MonoBehaviour
                 EndBattle(true);
                 break;
 
-            
+
 
         }
 
-        
-        
-        
+
+
+
     }
 
 
@@ -294,6 +300,10 @@ public class BattlePhaseManager : MonoBehaviour
         DespawnMonster(mPlayerMonster);
         DespawnMonster(mEnemyMonster);
         mCurrentPhase = Phase.PRE;
+        if (playerWon)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().currency += mEnemy.GetComponent<Party>().reward;
+        }
         GamePersistantData.Instance.mAudio.clip = GamePersistantData.Instance.worldClip;
         GamePersistantData.Instance.mAudio.Play();
     }
