@@ -17,6 +17,7 @@ public class PlayerParty : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
     }
 
     public void AddMonster(Entity e)
