@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public enum Phase {PRE,BEGIN, PLAYER_CHOICE, PLAYER_ATTACK, OPPONENT_CHOICE, OPPONENT_ATTACK, ENEMY_SWITCH, PLAYER_SWITCH, PLAYER_DEATH, ENEMY_DEATH };
 
@@ -65,8 +66,8 @@ public class BattlePhaseManager : MonoBehaviour
         SpawnMonster(enemy, enemyTransform);
         NewMonsterInit();
         mCurrentPhase = Phase.BEGIN;
-        playerLosses = 0;
-        enemyLosses = 0;
+        playerLosses = mPlayer.GetComponent<Party>().monsterList.Where(x => x.GetHP() == 0).Count();
+        enemyLosses = mEnemy.GetComponent<Party>().monsterList.Where(x => x.GetHP() == 0).Count();
     }
 
     void SpawnMonster(GameObject trainer, Transform transform)
@@ -289,6 +290,8 @@ public class BattlePhaseManager : MonoBehaviour
         mGUI.SetActive(false);
         GameObject.FindGameObjectWithTag("Enemy").GetComponent<DialogueHandler>().OpenPrompt(playerWon ? "battle_lost" : "battle_won");
         CameraSwitcher.UseOverworldCamera();
+        DespawnMonster(mPlayerMonster);
+        DespawnMonster(mEnemyMonster);
         mCurrentPhase = Phase.PRE;
     }
 }
