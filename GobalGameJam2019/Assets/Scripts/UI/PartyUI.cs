@@ -17,15 +17,29 @@ public class PartyUI : MonoBehaviour
     public Text pagetext;
 
     private int offset = 0;
+
+    private int prevPartySize = 0;
+    private int prevInventorySize = 0;
     // Start is called before the first frame update
     void Start()
     {
         slots = GameObject.FindGameObjectsWithTag("MonsterSlot");
         partyslots = GameObject.FindGameObjectsWithTag("PartySlot");
+        UpdateParty();
+        UpdateInventory();
 
-        for(int i = 0; i < 3; ++i)
+
+
+
+        UpdatePartyStatus();
+    }
+
+    void UpdateParty()
+    {
+        ClearParty();
+        for (int i = 0; i < playerParty.party.Count; ++i)
         {
-            if(playerParty.party[i] != null)
+            if (playerParty.party[i] != null)
             {
                 GameObject card = Instantiate(monsterCard);
                 card.transform.parent = partyslots[i].transform;
@@ -35,26 +49,23 @@ public class PartyUI : MonoBehaviour
             }
         }
 
-
-        for (int i = 0; i < 6; ++i)
-        {
-            if (playerParty.monsterInventory[i] != null)
-            {
-                GameObject card = Instantiate(monsterCard);
-                card.transform.parent = slots[i].transform;
-                card.GetComponent<MonsterCard>().Initialize(playerParty.monsterInventory[i]);
-                card.GetComponent<MonsterCard>().resetPosition();
-                card.GetComponent<MonsterCard>().playerParty = playerParty;
-            }
-        }
-
-        UpdatePartyStatus();
     }
+
+
 
     // Update is called once per frame
     void Update()
     {
         pagetext.text = "Page: " + (offset + 1);
+
+        if (prevPartySize != playerParty.party.Count)
+            UpdateParty();
+
+        if (prevInventorySize != playerParty.monsterInventory.Count)
+            UpdateInventory();
+
+        prevPartySize = playerParty.party.Count;
+        prevInventorySize = playerParty.monsterInventory.Count;
         UpdatePartyStatus();
     }
     public void ClearPage()
@@ -68,7 +79,18 @@ public class PartyUI : MonoBehaviour
         }
     }
 
-    public void UpdatePage()
+    public void ClearParty()
+    {
+        for (int i = 0; i < 3; ++i)
+        {
+            if (partyslots[i].transform.childCount > 0)
+            {
+                Destroy(partyslots[i].transform.GetChild(0).gameObject);
+            }
+        }
+    }
+
+    public void UpdateInventory()
     {
         ClearPage();
 
@@ -140,8 +162,8 @@ public class PartyUI : MonoBehaviour
         if (offset < 0)
             offset = 0;
 
-        
-        UpdatePage();
+
+        UpdateInventory();
         
 
     }
