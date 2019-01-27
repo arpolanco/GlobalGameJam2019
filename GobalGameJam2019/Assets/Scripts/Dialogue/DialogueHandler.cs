@@ -54,6 +54,7 @@ public class DialogueHandler : MonoBehaviour
                             break;
                         case "exit":
                             inDialogue = false;
+                            CameraSwitcher.inDialogue = false;
                             break;
                         case "battle":
                             CameraSwitcher.UseArenaCamera();
@@ -77,11 +78,13 @@ public class DialogueHandler : MonoBehaviour
     public void StartDialogue()
     {
         inDialogue = true;
+        CameraSwitcher.inDialogue = true;
     }
 
     public void OpenPrompt(string s)
     {
         inDialogue = true;
         currentPrompt = prompts.Where(x => x.Attribute("id").Value == s).First();
+        CameraSwitcher.inDialogue = true;
     }
 }
