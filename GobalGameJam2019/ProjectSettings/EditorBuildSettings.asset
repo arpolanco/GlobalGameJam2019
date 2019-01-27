@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/new_arena.unity
+    guid: bc28285b9f37b0a4dad0da1201950782
+  - enabled: 1
+    path: Assets/Scenes/DaltonsTestScene.unity
+    guid: b541726b3a317604cb54f915ddb1d11d
   m_configObjects: {}

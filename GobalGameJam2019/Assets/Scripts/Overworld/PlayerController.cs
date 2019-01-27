@@ -30,14 +30,20 @@ public class PlayerController : MonoBehaviour
         {
             playerState = PlayerState.Walking;
             playerAnimator.StopPlayback();
-            playerAnimator.Play("HumanoidWalk");
+            if (walkSpeed == 3)
+                playerAnimator.Play("HumanoidWalk");
+            else
+                playerAnimator.Play("HumanoidRun");
             currentWalkingDirection = new Vector3(0, 0, Input.GetAxis("Forward"));
         }
         if (Input.GetAxis("Right") != 0)
         {
             playerState = PlayerState.Walking;
             playerAnimator.StopPlayback();
-            playerAnimator.Play("HumanoidWalk");
+            if (walkSpeed == 3)
+                playerAnimator.Play("HumanoidWalk");
+            else
+                playerAnimator.Play("HumanoidRun");
             currentWalkingDirection = new Vector3(Input.GetAxis("Right"), 0, 0);
         }
         if (Input.GetAxis("Forward") == 0 && Input.GetAxis("Right") == 0)
@@ -45,6 +51,15 @@ public class PlayerController : MonoBehaviour
             playerState = PlayerState.Idle;
             playerAnimator.StopPlayback();
             playerAnimator.Play("HumanoidIdle");
+        }
+
+        if (Input.GetButtonDown("Sprint"))
+        {
+            walkSpeed = 8;
+        }
+        else if (Input.GetButtonUp("Sprint"))
+        {
+            walkSpeed = 3;
         }
 
         transform.forward = currentWalkingDirection;

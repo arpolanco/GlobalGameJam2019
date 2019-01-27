@@ -20,8 +20,8 @@ public class GameplaySequence : Singleton<GameplaySequence>
         switch (eventPosition)
         {
             case 0:
-                if (trainer0.GetComponent<NPCOverworldComp>().isDefeated && trainer1.GetComponent<NPCOverworldComp>().isDefeated)
-                    IncreaseEventPosition();
+                //if (trainer0.GetComponent<NPCOverworldComp>().isDefeated && trainer1.GetComponent<NPCOverworldComp>().isDefeated)
+                //    IncreaseEventPosition();
                 break;
             case 1:
                 break;

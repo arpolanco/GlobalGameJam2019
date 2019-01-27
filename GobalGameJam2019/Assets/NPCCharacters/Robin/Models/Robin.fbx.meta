@@ -1,0 +1,1717 @@
+fileFormatVersion: 2
+guid: c367b0e71398997469e1d242db3c1157
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BackPack
+    100002: Chest
+    100004: Foot_l
+    100006: Foot_r
+    100008: Foots
+    100010: Hair
+    100012: Hand_l
+    100014: Hand_r
+    100016: Hands
+    100018: Head
+    100020: Head Attachemnt
+    100022: Heads
+    100024: Hips
+    100026: index_01_l
+    100028: index_01_r
+    100030: index_02_l
+    100032: index_02_r
+    100034: index_03_l
+    100036: index_03_r
+    100038: LowerArm_l
+    100040: LowerArm_r
+    100042: LowerBody
+    100044: LowerLeg_l
+    100046: LowerLeg_r
+    100048: Masks
+    100050: middle_01_l
+    100052: middle_01_r
+    100054: middle_02_l
+    100056: middle_02_r
+    100058: middle_03_l
+    100060: middle_03_r
+    100062: Neck
+    100064: pinky_01_l
+    100066: pinky_01_r
+    100068: pinky_02_l
+    100070: pinky_02_r
+    100072: pinky_03_l
+    100074: pinky_03_r
+    100076: ring_01_l
+    100078: ring_01_r
+    100080: ring_02_l
+    100082: ring_02_r
+    100084: ring_03_l
+    100086: ring_03_r
+    100088: //RootNode
+    100090: Robin_BP_BackPack
+    100092: Robin_BP_Bag
+    100094: Robin_BP_MilitaryBackpack
+    100096: Robin_BP_TravelBag
+    100098: Robin_Foot_AllStar
+    100100: Robin_Foot_AllStar2
+    100102: Robin_Foot_CommonShoes
+    100104: Robin_Foot_Flogs
+    100106: Robin_Foot_Foot
+    100108: Robin_Foot_HipHopSneakers
+    100110: Robin_Foot_LeatherBoots
+    100112: Robin_Foot_LongBoots
+    100114: Robin_Foot_OnlySocks
+    100116: Robin_Foot_Sandals
+    100118: Robin_Foot_SpecialBoots
+    100120: Robin_HA_Cap
+    100122: Robin_HA_Cap.001
+    100124: Robin_HA_Hat
+    100126: Robin_Hair_style.000
+    100128: Robin_Hair_style.001
+    100130: Robin_Hair_style.002
+    100132: Robin_Hair_style.003
+    100134: Robin_Hair_style.004
+    100136: Robin_Hair_style.005
+    100138: Robin_Hair_style.006
+    100140: Robin_Hair_style.007
+    100142: Robin_Hair_style.008
+    100144: Robin_Hair_style.009
+    100146: Robin_Hair_style.010
+    100148: Robin_Hair_style.011
+    100150: Robin_Hair_style.011_var1
+    100152: Robin_Hair_style.011_var2
+    100154: Robin_Hair_style.011_var3
+    100156: Robin_Hair_style.011_var4
+    100158: Robin_Hair_style.011_var5
+    100160: Robin_Hand_Bandage
+    100162: Robin_Hand_DragonGlove
+    100164: Robin_Hand_Glove
+    100166: Robin_Hand_Glove.001
+    100168: Robin_Hand_Glove.002
+    100170: Robin_Hand_Glove.003
+    100172: Robin_Hand_Hand
+    100174: Robin_Hand_PlasticGloves
+    100176: Robin_Hand_SkeletalHand
+    100178: Robin_Hand_StylishHand
+    100180: Robin_Hand_TattooadHand
+    100182: Robin_Head_Head
+    100184: Robin_Head_TattooadHeadAndEarrings
+    100186: Robin_LB_CommonPants
+    100188: Robin_LB_CommonPants.001
+    100190: Robin_LB_CommonPants.002
+    100192: Robin_LB_CommonPants.003
+    100194: Robin_LB_HipHopPants
+    100196: Robin_LB_HipHopShorts
+    100198: Robin_LB_LowerBody
+    100200: Robin_LB_RippedPants
+    100202: Robin_LB_Shorts
+    100204: Robin_LB_SurvivalPants
+    100206: Robin_LB_Underwear
+    100208: Robin_Mask_Mask
+    100210: Robin_UB_AthleticBody
+    100212: Robin_UB_coat
+    100214: Robin_UB_CommonT-Shirt
+    100216: Robin_UB_CommonT-Shirt.001
+    100218: Robin_UB_LongSleeve
+    100220: Robin_UB_LongSleeveMonster
+    100222: Robin_UB_SpecialCoat
+    100224: Robin_UB_StylishShirt
+    100226: Robin_UB_T-ShirtAndCoat
+    100228: Robin_UB_Tank-Top
+    100230: Robin_UB_TattooadBody
+    100232: Robin_UB_UpperBody
+    100234: Robin_Vest_LongCoat
+    100236: Robin_Vest_SpecialVest
+    100238: Shoulder_l
+    100240: Shoulder_r
+    100242: Spine
+    100244: thumb_01_l
+    100246: thumb_01_r
+    100248: thumb_02_l
+    100250: thumb_02_r
+    100252: thumb_03_l
+    100254: thumb_03_r
+    100256: Toe_l
+    100258: Toe_r
+    100260: UpperArm_l
+    100262: UpperArm_r
+    100264: UpperBody
+    100266: UpperLeg_l
+    100268: UpperLeg_r
+    100270: Vests
+    100272: Robin_Head_Head.001
+    100274: Robin_Head_Head.002
+    100276: Robin_Head_Head.003
+    100278: Robin_Head_Head.004
+    100280: Robin_Head_Head.005
+    100282: Robin_Head_Head.006
+    100284: Robin_Head_Head.007
+    100286: Robin_Head_Head.008
+    100288: Head_end
+    100290: index_03_l_end
+    100292: index_03_r_end
+    100294: middle_03_l_end
+    100296: middle_03_r_end
+    100298: pinky_03_l_end
+    100300: pinky_03_r_end
+    100302: ring_03_l_end
+    100304: ring_03_r_end
+    100306: thumb_03_l_end
+    100308: thumb_03_r_end
+    100310: Toe_l_end
+    100312: Toe_r_end
+    400000: BackPack
+    400002: Chest
+    400004: Foot_l
+    400006: Foot_r
+    400008: Foots
+    400010: Hair
+    400012: Hand_l
+    400014: Hand_r
+    400016: Hands
+    400018: Head
+    400020: Head Attachemnt
+    400022: Heads
+    400024: Hips
+    400026: index_01_l
+    400028: index_01_r
+    400030: index_02_l
+    400032: index_02_r
+    400034: index_03_l
+    400036: index_03_r
+    400038: LowerArm_l
+    400040: LowerArm_r
+    400042: LowerBody
+    400044: LowerLeg_l
+    400046: LowerLeg_r
+    400048: Masks
+    400050: middle_01_l
+    400052: middle_01_r
+    400054: middle_02_l
+    400056: middle_02_r
+    400058: middle_03_l
+    400060: middle_03_r
+    400062: Neck
+    400064: pinky_01_l
+    400066: pinky_01_r
+    400068: pinky_02_l
+    400070: pinky_02_r
+    400072: pinky_03_l
+    400074: pinky_03_r
+    400076: ring_01_l
+    400078: ring_01_r
+    400080: ring_02_l
+    400082: ring_02_r
+    400084: ring_03_l
+    400086: ring_03_r
+    400088: //RootNode
+    400090: Robin_BP_BackPack
+    400092: Robin_BP_Bag
+    400094: Robin_BP_MilitaryBackpack
+    400096: Robin_BP_TravelBag
+    400098: Robin_Foot_AllStar
+    400100: Robin_Foot_AllStar2
+    400102: Robin_Foot_CommonShoes
+    400104: Robin_Foot_Flogs
+    400106: Robin_Foot_Foot
+    400108: Robin_Foot_HipHopSneakers
+    400110: Robin_Foot_LeatherBoots
+    400112: Robin_Foot_LongBoots
+    400114: Robin_Foot_OnlySocks
+    400116: Robin_Foot_Sandals
+    400118: Robin_Foot_SpecialBoots
+    400120: Robin_HA_Cap
+    400122: Robin_HA_Cap.001
+    400124: Robin_HA_Hat
+    400126: Robin_Hair_style.000
+    400128: Robin_Hair_style.001
+    400130: Robin_Hair_style.002
+    400132: Robin_Hair_style.003
+    400134: Robin_Hair_style.004
+    400136: Robin_Hair_style.005
+    400138: Robin_Hair_style.006
+    400140: Robin_Hair_style.007
+    400142: Robin_Hair_style.008
+    400144: Robin_Hair_style.009
+    400146: Robin_Hair_style.010
+    400148: Robin_Hair_style.011
+    400150: Robin_Hair_style.011_var1
+    400152: Robin_Hair_style.011_var2
+    400154: Robin_Hair_style.011_var3
+    400156: Robin_Hair_style.011_var4
+    400158: Robin_Hair_style.011_var5
+    400160: Robin_Hand_Bandage
+    400162: Robin_Hand_DragonGlove
+    400164: Robin_Hand_Glove
+    400166: Robin_Hand_Glove.001
+    400168: Robin_Hand_Glove.002
+    400170: Robin_Hand_Glove.003
+    400172: Robin_Hand_Hand
+    400174: Robin_Hand_PlasticGloves
+    400176: Robin_Hand_SkeletalHand
+    400178: Robin_Hand_StylishHand
+    400180: Robin_Hand_TattooadHand
+    400182: Robin_Head_Head
+    400184: Robin_Head_TattooadHeadAndEarrings
+    400186: Robin_LB_CommonPants
+    400188: Robin_LB_CommonPants.001
+    400190: Robin_LB_CommonPants.002
+    400192: Robin_LB_CommonPants.003
+    400194: Robin_LB_HipHopPants
+    400196: Robin_LB_HipHopShorts
+    400198: Robin_LB_LowerBody
+    400200: Robin_LB_RippedPants
+    400202: Robin_LB_Shorts
+    400204: Robin_LB_SurvivalPants
+    400206: Robin_LB_Underwear
+    400208: Robin_Mask_Mask
+    400210: Robin_UB_AthleticBody
+    400212: Robin_UB_coat
+    400214: Robin_UB_CommonT-Shirt
+    400216: Robin_UB_CommonT-Shirt.001
+    400218: Robin_UB_LongSleeve
+    400220: Robin_UB_LongSleeveMonster
+    400222: Robin_UB_SpecialCoat
+    400224: Robin_UB_StylishShirt
+    400226: Robin_UB_T-ShirtAndCoat
+    400228: Robin_UB_Tank-Top
+    400230: Robin_UB_TattooadBody
+    400232: Robin_UB_UpperBody
+    400234: Robin_Vest_LongCoat
+    400236: Robin_Vest_SpecialVest
+    400238: Shoulder_l
+    400240: Shoulder_r
+    400242: Spine
+    400244: thumb_01_l
+    400246: thumb_01_r
+    400248: thumb_02_l
+    400250: thumb_02_r
+    400252: thumb_03_l
+    400254: thumb_03_r
+    400256: Toe_l
+    400258: Toe_r
+    400260: UpperArm_l
+    400262: UpperArm_r
+    400264: UpperBody
+    400266: UpperLeg_l
+    400268: UpperLeg_r
+    400270: Vests
+    400272: Robin_Head_Head.001
+    400274: Robin_Head_Head.002
+    400276: Robin_Head_Head.003
+    400278: Robin_Head_Head.004
+    400280: Robin_Head_Head.005
+    400282: Robin_Head_Head.006
+    400284: Robin_Head_Head.007
+    400286: Robin_Head_Head.008
+    400288: Head_end
+    400290: index_03_l_end
+    400292: index_03_r_end
+    400294: middle_03_l_end
+    400296: middle_03_r_end
+    400298: pinky_03_l_end
+    400300: pinky_03_r_end
+    400302: ring_03_l_end
+    400304: ring_03_r_end
+    400306: thumb_03_l_end
+    400308: thumb_03_r_end
+    400310: Toe_l_end
+    400312: Toe_r_end
+    2100000: Robin_StarterPalette
+    2100002: Robin_tattoo
+    2100004: Robin_Custom_LongSleeveMonster
+    4300000: Robin_Mask_Mask
+    4300002: Robin_BP_BackPack
+    4300004: Robin_BP_MilitaryBackpack
+    4300006: Robin_BP_TravelBag
+    4300008: Robin_BP_Bag
+    4300010: Robin_Head_TattooadHeadAndEarrings
+    4300012: Robin_Head_Head
+    4300014: Robin_Vest_SpecialVest
+    4300016: Robin_Vest_LongCoat
+    4300018: Robin_HA_Cap.001
+    4300020: Robin_HA_Hat
+    4300022: Robin_HA_Cap
+    4300024: Robin_LB_Underwear
+    4300026: Robin_LB_RippedPants
+    4300028: Robin_LB_HipHopShorts
+    4300030: Robin_LB_Shorts
+    4300032: Robin_LB_CommonPants.003
+    4300034: Robin_LB_LowerBody
+    4300036: Robin_LB_HipHopPants
+    4300038: Robin_LB_CommonPants.002
+    4300040: Robin_LB_CommonPants.001
+    4300042: Robin_LB_CommonPants
+    4300044: Robin_LB_SurvivalPants
+    4300046: Robin_Hand_Glove.003
+    4300048: Robin_Hand_StylishHand
+    4300050: Robin_Hand_Glove.001
+    4300052: Robin_Hand_Hand
+    4300054: Robin_Hand_Glove.002
+    4300056: Robin_Hand_Glove
+    4300058: Robin_Hand_Bandage
+    4300060: Robin_Hand_DragonGlove
+    4300062: Robin_Hand_SkeletalHand
+    4300064: Robin_Hand_TattooadHand
+    4300066: Robin_Hand_PlasticGloves
+    4300068: Robin_Foot_Foot
+    4300070: Robin_Foot_AllStar2
+    4300072: Robin_Foot_AllStar
+    4300074: Robin_Foot_SpecialBoots
+    4300076: Robin_Foot_CommonShoes
+    4300078: Robin_Foot_LeatherBoots
+    4300080: Robin_Foot_Flogs
+    4300082: Robin_Foot_OnlySocks
+    4300084: Robin_Foot_HipHopSneakers
+    4300086: Robin_Foot_Sandals
+    4300088: Robin_Foot_LongBoots
+    4300090: Robin_Hair_style.000
+    4300092: Robin_Hair_style.001
+    4300094: Robin_Hair_style.003
+    4300096: Robin_Hair_style.007
+    4300098: Robin_Hair_style.006
+    4300100: Robin_Hair_style.002
+    4300102: Robin_Hair_style.004
+    4300104: Robin_Hair_style.005
+    4300106: Robin_Hair_style.011
+    4300108: Robin_Hair_style.011_var1
+    4300110: Robin_Hair_style.011_var4
+    4300112: Robin_Hair_style.011_var3
+    4300114: Robin_Hair_style.011_var2
+    4300116: Robin_Hair_style.009
+    4300118: Robin_Hair_style.011_var5
+    4300120: Robin_Hair_style.008
+    4300122: Robin_Hair_style.010
+    4300124: Robin_UB_TattooadBody
+    4300126: Robin_UB_LongSleeveMonster
+    4300128: Robin_UB_T-ShirtAndCoat
+    4300130: Robin_UB_CommonT-Shirt.001
+    4300132: Robin_UB_SpecialCoat
+    4300134: Robin_UB_AthleticBody
+    4300136: Robin_UB_UpperBody
+    4300138: Robin_UB_StylishShirt
+    4300140: Robin_UB_LongSleeve
+    4300142: Robin_UB_Tank-Top
+    4300144: Robin_UB_CommonT-Shirt
+    4300146: Robin_UB_coat
+    4300148: Robin_Head_Head.008
+    4300150: Robin_Head_Head.007
+    4300152: Robin_Head_Head.006
+    4300154: Robin_Head_Head.005
+    4300156: Robin_Head_Head.004
+    4300158: Robin_Head_Head.003
+    4300160: Robin_Head_Head.002
+    4300162: Robin_Head_Head.001
+    9500000: //RootNode
+    13700000: Robin_BP_BackPack
+    13700002: Robin_BP_Bag
+    13700004: Robin_BP_MilitaryBackpack
+    13700006: Robin_BP_TravelBag
+    13700008: Robin_Foot_AllStar
+    13700010: Robin_Foot_AllStar2
+    13700012: Robin_Foot_CommonShoes
+    13700014: Robin_Foot_Flogs
+    13700016: Robin_Foot_Foot
+    13700018: Robin_Foot_HipHopSneakers
+    13700020: Robin_Foot_LeatherBoots
+    13700022: Robin_Foot_LongBoots
+    13700024: Robin_Foot_OnlySocks
+    13700026: Robin_Foot_Sandals
+    13700028: Robin_Foot_SpecialBoots
+    13700030: Robin_HA_Cap
+    13700032: Robin_HA_Cap.001
+    13700034: Robin_HA_Hat
+    13700036: Robin_Hair_style.000
+    13700038: Robin_Hair_style.001
+    13700040: Robin_Hair_style.002
+    13700042: Robin_Hair_style.003
+    13700044: Robin_Hair_style.004
+    13700046: Robin_Hair_style.005
+    13700048: Robin_Hair_style.006
+    13700050: Robin_Hair_style.007
+    13700052: Robin_Hair_style.008
+    13700054: Robin_Hair_style.009
+    13700056: Robin_Hair_style.010
+    13700058: Robin_Hair_style.011
+    13700060: Robin_Hair_style.011_var1
+    13700062: Robin_Hair_style.011_var2
+    13700064: Robin_Hair_style.011_var3
+    13700066: Robin_Hair_style.011_var4
+    13700068: Robin_Hair_style.011_var5
+    13700070: Robin_Hand_Bandage
+    13700072: Robin_Hand_DragonGlove
+    13700074: Robin_Hand_Glove
+    13700076: Robin_Hand_Glove.001
+    13700078: Robin_Hand_Glove.002
+    13700080: Robin_Hand_Glove.003
+    13700082: Robin_Hand_Hand
+    13700084: Robin_Hand_PlasticGloves
+    13700086: Robin_Hand_SkeletalHand
+    13700088: Robin_Hand_StylishHand
+    13700090: Robin_Hand_TattooadHand
+    13700092: Robin_Head_Head
+    13700094: Robin_Head_TattooadHeadAndEarrings
+    13700096: Robin_LB_CommonPants
+    13700098: Robin_LB_CommonPants.001
+    13700100: Robin_LB_CommonPants.002
+    13700102: Robin_LB_CommonPants.003
+    13700104: Robin_LB_HipHopPants
+    13700106: Robin_LB_HipHopShorts
+    13700108: Robin_LB_LowerBody
+    13700110: Robin_LB_RippedPants
+    13700112: Robin_LB_Shorts
+    13700114: Robin_LB_SurvivalPants
+    13700116: Robin_LB_Underwear
+    13700118: Robin_Mask_Mask
+    13700120: Robin_UB_AthleticBody
+    13700122: Robin_UB_coat
+    13700124: Robin_UB_CommonT-Shirt
+    13700126: Robin_UB_CommonT-Shirt.001
+    13700128: Robin_UB_LongSleeve
+    13700130: Robin_UB_LongSleeveMonster
+    13700132: Robin_UB_SpecialCoat
+    13700134: Robin_UB_StylishShirt
+    13700136: Robin_UB_T-ShirtAndCoat
+    13700138: Robin_UB_Tank-Top
+    13700140: Robin_UB_TattooadBody
+    13700142: Robin_UB_UpperBody
+    13700144: Robin_Vest_LongCoat
+    13700146: Robin_Vest_SpecialVest
+    13700148: Robin_Head_Head.001
+    13700150: Robin_Head_Head.002
+    13700152: Robin_Head_Head.003
+    13700154: Robin_Head_Head.004
+    13700156: Robin_Head_Head.005
+    13700158: Robin_Head_Head.006
+    13700160: Robin_Head_Head.007
+    13700162: Robin_Head_Head.008
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Robin_Custom_LongSleeveMonster
+    second: {fileID: 2100000, guid: 21e15b7e37a347443bae3f6e0452169f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Robin_StarterPalette
+    second: {fileID: 2100000, guid: 6e6a2a085970900499a8e00ae7412f0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Robin_tattoo
+    second: {fileID: 2100000, guid: 30127942c5df61849a5a47d78c0d1b8f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperLeg_l
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperLeg_r
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerLeg_l
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerLeg_r
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot_l
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot_r
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder_l
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder_r
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperArm_l
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperArm_r
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerArm_l
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerArm_r
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand_l
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand_r
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toe_l
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toe_r
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thumb_01_l
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thumb_02_l
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thumb_03_l
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: index_01_l
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: index_02_l
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: index_03_l
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: middle_01_l
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: middle_02_l
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: middle_03_l
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ring_01_l
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ring_02_l
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ring_03_l
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pinky_01_l
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pinky_02_l
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pinky_03_l
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thumb_01_r
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thumb_02_r
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thumb_03_r
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: index_01_r
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: index_02_r
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: index_03_r
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: middle_01_r
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: middle_02_r
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: middle_03_r
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ring_01_r
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ring_02_r
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ring_03_r
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pinky_01_r
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pinky_02_r
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pinky_03_r
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Robin(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BackPack
+      parentName: Robin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_BP_BackPack
+      parentName: BackPack
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_BP_Bag
+      parentName: BackPack
+      position: {x: 0.0020931037, y: 0.010420364, z: -0.0012703362}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_BP_MilitaryBackpack
+      parentName: BackPack
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_BP_TravelBag
+      parentName: BackPack
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Foots
+      parentName: Robin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Foot_AllStar
+      parentName: Foots
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Foot_AllStar2
+      parentName: Foots
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Foot_CommonShoes
+      parentName: Foots
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Foot_Flogs
+      parentName: Foots
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Foot_Foot
+      parentName: Foots
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Foot_HipHopSneakers
+      parentName: Foots
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Foot_LeatherBoots
+      parentName: Foots
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Foot_LongBoots
+      parentName: Foots
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Foot_OnlySocks
+      parentName: Foots
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Foot_Sandals
+      parentName: Foots
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Foot_SpecialBoots
+      parentName: Foots
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hair
+      parentName: Robin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.000
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.001
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.002
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.003
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.004
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.005
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.006
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.007
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.008
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.009
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.010
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.011
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.011_var1
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.011_var2
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.011_var3
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.011_var4
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hair_style.011_var5
+      parentName: Hair
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hands
+      parentName: Robin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hand_Bandage
+      parentName: Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hand_DragonGlove
+      parentName: Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hand_Glove
+      parentName: Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hand_Glove.001
+      parentName: Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hand_Glove.002
+      parentName: Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hand_Glove.003
+      parentName: Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hand_Hand
+      parentName: Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hand_PlasticGloves
+      parentName: Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hand_SkeletalHand
+      parentName: Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hand_StylishHand
+      parentName: Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Hand_TattooadHand
+      parentName: Hands
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head Attachemnt
+      parentName: Robin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_HA_Cap
+      parentName: Head Attachemnt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_HA_Cap.001
+      parentName: Head Attachemnt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_HA_Hat
+      parentName: Head Attachemnt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Heads
+      parentName: Robin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Head_Head
+      parentName: Heads
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Head_Head.001
+      parentName: Heads
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Head_Head.002
+      parentName: Heads
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Head_Head.003
+      parentName: Heads
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Head_Head.004
+      parentName: Heads
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Head_Head.005
+      parentName: Heads
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Head_Head.006
+      parentName: Heads
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Head_Head.007
+      parentName: Heads
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Head_Head.008
+      parentName: Heads
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Head_TattooadHeadAndEarrings
+      parentName: Heads
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips
+      parentName: Robin(Clone)
+      position: {x: -0, y: 0.00045321824, z: 0.008739351}
+      rotation: {x: 0.7071069, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine
+      parentName: Hips
+      position: {x: -0, y: 0.0013501093, z: -0.00011713267}
+      rotation: {x: 0.03178128, y: -0.00000011914917, z: -0.0000000037886263, w: 0.99949485}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Chest
+      parentName: Spine
+      position: {x: 8.881784e-18, y: 0.0023064471, z: 3.7252902e-11}
+      rotation: {x: -0.115377426, y: 0.0000002368357, z: -1.0617629e-12, w: 0.9933218}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: Neck
+      parentName: Chest
+      position: {x: -3.7500763e-11, y: 0.0021015988, z: 0.00015727717}
+      rotation: {x: 0.24525222, y: -0.00000023114941, z: 1.4668535e-12, w: 0.9694593}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Head
+      parentName: Neck
+      position: {x: -2.3591271e-11, y: 0.0012176031, z: -0.000098946126}
+      rotation: {x: -0.14261974, y: 6.109753e-15, z: 0.00000003400414, w: 0.98977757}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder_l
+      parentName: Chest
+      position: {x: -0.00027813573, y: 0.0016196514, z: 0.00047982085}
+      rotation: {x: 0.7215402, y: -0.6618399, z: -0.0042066798, w: -0.20329782}
+      scale: {x: 0.9999999, y: 0.9999998, z: 1}
+    - name: UpperArm_l
+      parentName: Shoulder_l
+      position: {x: 0.0000000014156103, y: 0.001156985, z: 5.5879353e-11}
+      rotation: {x: -0.13148373, y: 0.78081733, z: -0.0632572, w: 0.60748243}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: LowerArm_l
+      parentName: UpperArm_l
+      position: {x: 1.3038516e-10, y: 0.0025173053, z: -1.5832484e-10}
+      rotation: {x: 0.03520829, y: 0.9158664, z: 0.008109359, w: 0.39985418}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: Hand_l
+      parentName: LowerArm_l
+      position: {x: -4.4703483e-10, y: 0.0033739395, z: -5.587935e-10}
+      rotation: {x: 0.02921068, y: -0.0014234318, z: 0.0004384867, w: 0.9995722}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999976}
+    - name: index_01_l
+      parentName: Hand_l
+      position: {x: -0.0002961626, y: 0.001209271, z: 0.00016903735}
+      rotation: {x: 0.021688022, y: -0.015304113, z: 0.059668783, w: 0.99786526}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: index_02_l
+      parentName: index_01_l
+      position: {x: -2.9802322e-10, y: 0.00047434523, z: 0}
+      rotation: {x: -0.027797837, y: -0.056332666, z: -0.020931417, w: 0.9978055}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: index_03_l
+      parentName: index_02_l
+      position: {x: 1.4901161e-10, y: 0.00040383605, z: 8.9406965e-10}
+      rotation: {x: -0.04409282, y: -0.023908565, z: 0.031801578, w: 0.99823487}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: middle_01_l
+      parentName: Hand_l
+      position: {x: -0.00007365599, y: 0.001208113, z: -0.000041180774}
+      rotation: {x: 0.0027881833, y: -0.04039964, z: 0.008889647, w: 0.9991402}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: middle_02_l
+      parentName: middle_01_l
+      position: {x: 8.9406965e-10, y: 0.00050796836, z: -4.4703483e-10}
+      rotation: {x: -0.015903115, y: 0.0042090896, z: 0.034464344, w: 0.99927056}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: middle_03_l
+      parentName: middle_02_l
+      position: {x: -1.4901161e-10, y: 0.00045734688, z: 1.4901161e-10}
+      rotation: {x: -0.04850384, y: -0.022047522, z: 0.04100247, w: 0.9977375}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: pinky_01_l
+      parentName: Hand_l
+      position: {x: 0.00031589883, y: 0.0011820635, z: -0.0004270501}
+      rotation: {x: -0.024662327, y: -0.15599477, z: -0.023729917, w: 0.9871648}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: pinky_02_l
+      parentName: pinky_01_l
+      position: {x: 2.9802322e-10, y: 0.00031870182, z: -2.2351741e-10}
+      rotation: {x: 0.028478744, y: 0.044998787, z: 0.02517566, w: 0.9982636}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1}
+    - name: pinky_03_l
+      parentName: pinky_02_l
+      position: {x: 0.0000000010803342, y: 0.00027694984, z: 5.2154064e-10}
+      rotation: {x: -0.018285822, y: -0.013676431, z: 0.016175864, w: 0.9996084}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    - name: ring_01_l
+      parentName: Hand_l
+      position: {x: 0.00013504982, y: 0.0012026138, z: -0.00026414372}
+      rotation: {x: -0.025041189, y: -0.067413874, z: 0.018821131, w: 0.9972333}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: ring_02_l
+      parentName: ring_01_l
+      position: {x: -2.2351741e-10, y: 0.000433937, z: 6.705522e-10}
+      rotation: {x: 0.029816203, y: -0.01028645, z: -0.017208705, w: 0.99935436}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: ring_03_l
+      parentName: ring_02_l
+      position: {x: 2.2351741e-10, y: 0.0004117062, z: 7.4505804e-11}
+      rotation: {x: -0.020849636, y: -0.005925272, z: 0.029745905, w: 0.9993225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: thumb_01_l
+      parentName: Hand_l
+      position: {x: -0.000269142, y: 0.00024181831, z: 0.0001789172}
+      rotation: {x: 0.4098016, y: -0.66322476, z: 0.019896735, w: 0.6259391}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: thumb_02_l
+      parentName: thumb_01_l
+      position: {x: -4.842877e-10, y: 0.00042921066, z: 5.587935e-10}
+      rotation: {x: 0.02464195, y: 0.058604747, z: 0.035188, w: 0.99735653}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: thumb_03_l
+      parentName: thumb_02_l
+      position: {x: -7.45058e-10, y: 0.00040182038, z: 5.9604643e-10}
+      rotation: {x: 0.009518648, y: -0.24118519, z: 0.060391217, w: 0.9685515}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Shoulder_r
+      parentName: Chest
+      position: {x: 0.0002781355, y: 0.0016196514, z: 0.00047982097}
+      rotation: {x: -0.5450946, y: -0.38296732, z: -0.46200114, w: 0.58545953}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: UpperArm_r
+      parentName: Shoulder_r
+      position: {x: -3.7252902e-11, y: 0.0011569847, z: -7.1479006e-10}
+      rotation: {x: 0.046969026, y: 0.08337564, z: -0.13623402, w: 0.98604393}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999999}
+    - name: LowerArm_r
+      parentName: UpperArm_r
+      position: {x: 9.313225e-11, y: 0.002517307, z: -1.6298145e-10}
+      rotation: {x: -0.0012412664, y: 0.6637969, z: 0.0029616908, w: 0.7479059}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Hand_r
+      parentName: LowerArm_r
+      position: {x: 4.1472957e-11, y: 0.0033739395, z: 2.9802322e-10}
+      rotation: {x: 0.020782003, y: -0.053490452, z: 0.020532133, w: 0.99814093}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+    - name: index_01_r
+      parentName: Hand_r
+      position: {x: 0.00010492334, y: 0.0012092696, z: 0.00032446385}
+      rotation: {x: 0.057138793, y: 0.015909228, z: -0.0046514897, w: 0.99822867}
+      scale: {x: 0.9999999, y: 1, z: 0.9999999}
+    - name: index_02_r
+      parentName: index_01_r
+      position: {x: -1.6996636e-10, y: 0.00047434485, z: -5.9604643e-10}
+      rotation: {x: -0.036116038, y: -0.0034516715, z: -0.01955341, w: 0.9991504}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: index_03_r
+      parentName: index_02_r
+      position: {x: -1.9092113e-10, y: 0.00040383547, z: 4.4703483e-10}
+      rotation: {x: -0.017384855, y: 0.0060529104, z: -0.05150997, w: 0.9985028}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: middle_01_r
+      parentName: Hand_r
+      position: {x: 0.00008217266, y: 0.0012081123, z: 0.00001920402}
+      rotation: {x: 0.0037160895, y: 0.050667353, z: -0.058967885, w: 0.9969663}
+      scale: {x: 1, y: 0.9999999, z: 0.9999998}
+    - name: middle_02_r
+      parentName: middle_01_r
+      position: {x: -6.61239e-10, y: 0.00050796894, z: -2.9802322e-10}
+      rotation: {x: 0.013353332, y: 0.005698485, z: -0.035529986, w: 0.99926317}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: middle_03_r
+      parentName: middle_02_r
+      position: {x: 4.842877e-10, y: 0.00045734635, z: 0}
+      rotation: {x: -0.0055002803, y: 0.0026487058, z: -0.06327377, w: 0.99797755}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: pinky_01_r
+      parentName: Hand_r
+      position: {x: 0.00005435502, y: 0.0011820619, z: -0.00052840356}
+      rotation: {x: -0.041063767, y: -0.0028880388, z: -0.04625345, w: 0.9980812}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+    - name: pinky_02_r
+      parentName: pinky_01_r
+      position: {x: -0.0000000010983785, y: 0.00031870074, z: 2.2351741e-10}
+      rotation: {x: 0.037030924, y: 0.008955666, z: -0.008576919, w: 0.9992372}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: pinky_03_r
+      parentName: pinky_02_r
+      position: {x: -7.380731e-10, y: 0.00027694964, z: -7.4505804e-11}
+      rotation: {x: -0.0074617625, y: -0.0007048216, z: -0.023245497, w: 0.99970174}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: ring_01_r
+      parentName: Hand_r
+      position: {x: 0.00007820669, y: 0.0012026128, z: -0.00028617246}
+      rotation: {x: -0.009266954, y: 0.027038528, z: -0.046239752, w: 0.9985214}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: ring_02_r
+      parentName: ring_01_r
+      position: {x: 8.614734e-11, y: 0.0004339369, z: -2.2351741e-10}
+      rotation: {x: 0.0122275, y: 0.008707632, z: 0.031010875, w: 0.99940634}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: ring_03_r
+      parentName: ring_02_r
+      position: {x: -9.0338287e-10, y: 0.00041170634, z: 1.4901161e-10}
+      rotation: {x: 0.0023774435, y: 0.003252023, z: -0.036247406, w: 0.99933475}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: thumb_01_r
+      parentName: Hand_r
+      position: {x: 0.00007830105, y: 0.000241817, z: 0.00031355603}
+      rotation: {x: -0.10307505, y: 0.84778666, z: 0.39712566, w: -0.33604258}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: thumb_02_r
+      parentName: thumb_01_r
+      position: {x: -7.4505804e-11, y: 0.00042921095, z: -1.862645e-10}
+      rotation: {x: -0.03323868, y: 0.2190966, z: 0.0089313965, w: 0.9750959}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: thumb_03_r
+      parentName: thumb_02_r
+      position: {x: -3.72529e-10, y: 0.00040182023, z: 1.11758706e-10}
+      rotation: {x: -0.010273635, y: -0.17881143, z: 0.060267456, w: 0.98198205}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: UpperLeg_l
+      parentName: Hips
+      position: {x: -0.0006046899, y: -0.000000017398131, z: -0.00001983408}
+      rotation: {x: 0.0016342308, y: -0.023982128, z: 0.99917066, w: 0.03286697}
+      scale: {x: 0.9999692, y: 0.9999999, z: 0.99998325}
+    - name: LowerLeg_l
+      parentName: UpperLeg_l
+      position: {x: -8.731149e-12, y: 0.004029922, z: -2.05182e-11}
+      rotation: {x: 0.031802714, y: 0.0017188399, z: 0.03771727, w: 0.9987808}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Foot_l
+      parentName: LowerLeg_l
+      position: {x: -1.8805621e-10, y: 0.0040675625, z: -6.4151066e-11}
+      rotation: {x: 0.44413385, y: 0.026593331, z: 0.01587429, w: 0.895425}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Toe_l
+      parentName: Foot_l
+      position: {x: 3.5142875e-11, y: 0.0010835874, z: 5.8207657e-12}
+      rotation: {x: 0.31338692, y: -0.0874042, z: 0.0011973616, w: 0.9455939}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: UpperLeg_r
+      parentName: Hips
+      position: {x: 0.0006046899, y: -0.000000017398131, z: -0.00001983408}
+      rotation: {x: 0.0002933194, y: -0.023918591, z: 0.9991719, w: -0.032914262}
+      scale: {x: 0.99996924, y: 0.9999998, z: 0.9999832}
+    - name: LowerLeg_r
+      parentName: UpperLeg_r
+      position: {x: -3.5070113e-11, y: 0.004029922, z: -4.5110938e-12}
+      rotation: {x: 0.031728104, y: 0.00016066803, z: -0.037780065, w: 0.9987823}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: Foot_r
+      parentName: LowerLeg_r
+      position: {x: 3.705736e-11, y: 0.0040675625, z: -9.846189e-11}
+      rotation: {x: 0.44413307, y: -0.026550936, z: -0.015895326, w: 0.8954263}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Toe_r
+      parentName: Foot_r
+      position: {x: 2.4956533e-11, y: 0.0010835875, z: -1.3969838e-11}
+      rotation: {x: 0.313387, y: 0.087404214, z: -0.001197373, w: 0.94559383}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: LowerBody
+      parentName: Robin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_LB_CommonPants
+      parentName: LowerBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_LB_CommonPants.001
+      parentName: LowerBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_LB_CommonPants.002
+      parentName: LowerBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_LB_CommonPants.003
+      parentName: LowerBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_LB_HipHopPants
+      parentName: LowerBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_LB_HipHopShorts
+      parentName: LowerBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_LB_LowerBody
+      parentName: LowerBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_LB_RippedPants
+      parentName: LowerBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_LB_Shorts
+      parentName: LowerBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_LB_SurvivalPants
+      parentName: LowerBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_LB_Underwear
+      parentName: LowerBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Masks
+      parentName: Robin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Mask_Mask
+      parentName: Masks
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: UpperBody
+      parentName: Robin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_AthleticBody
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_coat
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_CommonT-Shirt
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_CommonT-Shirt.001
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_LongSleeve
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_LongSleeveMonster
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_SpecialCoat
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_StylishShirt
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_T-ShirtAndCoat
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_Tank-Top
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_TattooadBody
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_UB_UpperBody
+      parentName: UpperBody
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Vests
+      parentName: Robin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Vest_LongCoat
+      parentName: Vests
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robin_Vest_SpecialVest
+      parentName: Vests
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
