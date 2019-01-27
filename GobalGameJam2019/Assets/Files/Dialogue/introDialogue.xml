@@ -1,0 +1,11 @@
+<dialogue>
+  <prompt id = "root" text="Hi! Happy Friday! I know you want to get home, but you need to finish your monthly Battle Reviews. It’s almost the 30th! You know how HR gets if their employee monsters don’t meet PM-95 regulations. Accounting hasn’t been up to par with their work reviews lately ever since they started battling for fun.">
+    <option action = "prompt" prompt = "2">Sounds right.</option>
+  </prompt>
+  <prompt id = "2" text="So if you could start by defeating the accounting team, that’d be greeeat. Just kinda push them back into the work environment">
+    <option action = "prompt" prompt = "end">You got it.</option>
+  </prompt>
+  <prompt id = "end" text="Oh! Don’t forget to collect their VBucks! Just input them into the loot box system so you can order more monsters from corporate. Thanks">
+    <option action = "exit">Okay</option>
+  </prompt>
+</dialogue>

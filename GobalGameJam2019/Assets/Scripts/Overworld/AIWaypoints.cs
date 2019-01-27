@@ -9,7 +9,8 @@ public class AIWaypoints : MonoBehaviour
     
     private Transform targetWaypoint;
     public Transform origWay;
- 
+
+    private Animator animator;
 
     private int targetWaypointIndex = 0;
     private float minDistance = 0.1f; //If the distance between the enemy and the waypoint is less than this, then it has reacehd the waypoint
@@ -25,10 +26,13 @@ public class AIWaypoints : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        animator = GetComponent<Animator>();
+
         foreach(Transform t in origWay)
         {
             waypoints.Add(t);
             t.GetComponent<MeshRenderer>().enabled = false;
+            Destroy(t.GetComponent<BoxCollider>());
         }
         timePause = timePauseBeforeWalking;
         lastWaypointIndex = waypoints.Count - 1;
@@ -67,6 +71,7 @@ public class AIWaypoints : MonoBehaviour
             {
                 timePause = timePauseBeforeWalking;
                 isWaiting = false;
+                animator.Play("Walk");
             }
                 
             
@@ -99,5 +104,6 @@ public class AIWaypoints : MonoBehaviour
 
         targetWaypoint = waypoints[targetWaypointIndex];
         isWaiting = true;
+        animator.Play("Idle");
     }
 }

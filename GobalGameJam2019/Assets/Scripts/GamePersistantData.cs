@@ -19,18 +19,27 @@ public class GamePersistantData : Singleton<GamePersistantData>
 
     public bool playerWon = false;
 
+    [HideInInspector]
+    public AudioSource mAudio;
+
+
+    public AudioClip battleClip;
+
+    public AudioClip worldClip;
+
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
     }
-
+    private void Start()
+    {
+        mAudio = GetComponent<AudioSource>();
+    }
     public void StorePreBattleData()
     {
         for (int i = 0; i < worldNPCObjects.Count; ++i)
         {
             worldNPCStoredTransforms[i] = worldNPCObjects[i].transform;
         }
-
         playerTransformPreBattle = playerObject.transform;
         playerObject.transform.parent = null;
         DontDestroyOnLoad(playerObject);
@@ -56,11 +65,6 @@ public class GamePersistantData : Singleton<GamePersistantData>
 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

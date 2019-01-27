@@ -1,0 +1,12 @@
+<dialogue>
+  <prompt id = "root" text="30th already? Do we HAVE to battle?">
+    <option action = "battle"> HR says we have to. Let’s just get it over with</option>
+  </prompt>
+
+  <prompt id = "battle_won" text="At least it’s Friday.">
+    <option action = "exit">Thankfully</option>
+  </prompt>
+  <prompt id = "battle_lost" text="I've been training">
+    <option action = "exit">Wow...</option>
+  </prompt>
+</dialogue>

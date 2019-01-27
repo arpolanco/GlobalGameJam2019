@@ -63,6 +63,8 @@ public class DialogueHandler : MonoBehaviour
                             //GamePersistantData.Instance.StorePreBattleData();
                             //GamePersistantData.Instance.StoreEnemyData(gameObject);
                             inDialogue = false;
+                            GamePersistantData.Instance.mAudio.clip = GamePersistantData.Instance.battleClip;
+                            GamePersistantData.Instance.mAudio.Play();
                             //SceneManager.LoadScene("new_arena");
                             break;
                     }

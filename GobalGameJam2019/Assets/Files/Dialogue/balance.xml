@@ -1,0 +1,12 @@
+<dialogue>
+	<prompt id = "root" text="Downstairs is pretty empty today. I guess everyone went home. Must’ve ran out of time?">
+		<option action = "battle"> 48 hours isn't enough time.</option>
+	</prompt>
+
+	<prompt id = "battle_won" text="This game sucks">
+		<option action = "exit">We weren't paying attention, okay.</option>
+	</prompt>
+	<prompt id = "battle_lost" text="YOU NEED TO BALANCE STUFF">
+		<option action = "exit">I know.</option>
+	</prompt>
+</dialogue>

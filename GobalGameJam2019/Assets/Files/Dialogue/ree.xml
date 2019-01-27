@@ -1,0 +1,12 @@
+<dialogue>
+	<prompt id = "root" text="ME? Battle YOU? You’re gonna get crushed.">
+		<option action = "battle"> lol bet</option>
+	</prompt>
+
+	<prompt id = "battle_won" text="REEEEEE">
+		<option action = "exit">You're fired.</option>
+	</prompt>
+	<prompt id = "battle_lost" text="REEE REEE REEE REEE">
+		<option action = "exit">r333 </option>
+	</prompt>
+</dialogue>
