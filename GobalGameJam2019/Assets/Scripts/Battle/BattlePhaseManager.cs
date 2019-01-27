@@ -119,7 +119,7 @@ public class BattlePhaseManager : MonoBehaviour
                             break;
 
                         case ButtonAction.SWAP:
-                            //TODO:: Add party swap shit here
+                            mCurrentPhase = Phase.PLAYER_SWITCH;
                             hasAttacked = false;
                             break;
 
@@ -127,7 +127,7 @@ public class BattlePhaseManager : MonoBehaviour
                     }
 
                     if (hasAttacked)
-                        ++mCurrentPhase;
+                        mCurrentPhase = Phase.OPPONENT_CHOICE;
 
                 }
 
@@ -138,7 +138,7 @@ public class BattlePhaseManager : MonoBehaviour
 
     void AIControl()
     {
-
+ 
         int tmp = Random.Range(0, 3);
         switch (tmp)
         {
@@ -160,6 +160,7 @@ public class BattlePhaseManager : MonoBehaviour
 
         }
         ++mCurrentPhase;
+        
     }
 
     void CheckDeath()
@@ -178,7 +179,7 @@ public class BattlePhaseManager : MonoBehaviour
         //Allows us to test the other battle phases 
         if (Application.isEditor)
         {
-            //Debug.Log(mCurrentPhase);
+            Debug.Log(mCurrentPhase);
 
             if (Input.GetKeyDown(KeyCode.N))
                 ++mCurrentPhase;
@@ -202,22 +203,31 @@ public class BattlePhaseManager : MonoBehaviour
                 break;
 
             case Phase.PLAYER_CHOICE:
-                UIControl();
-                CheckDeath();
+                if (mPlayerAnim.GetCurrentAnimatorStateInfo(0).IsName("idle") && mEnemyAnim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                {
+                    if (!mPlayerAnim.IsInTransition(0) && !mEnemyAnim.IsInTransition(0))
+                        UIControl();
+
+                }
                 break;
 
             case Phase.PLAYER_ATTACK:
-                ++mCurrentPhase;
+                mCurrentPhase = Phase.OPPONENT_CHOICE;
+                CheckDeath();
                 break;
 
 
             case Phase.OPPONENT_CHOICE:
-                AIControl();
-                CheckDeath();
+                if (mPlayerAnim.GetCurrentAnimatorStateInfo(0).IsName("idle") && mEnemyAnim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                {
+                    if(!mPlayerAnim.IsInTransition(0) && !mEnemyAnim.IsInTransition(0))
+                        AIControl();
+                }
                 break;
 
             case Phase.OPPONENT_ATTACK:
-                ++mCurrentPhase;
+                mCurrentPhase = Phase.PLAYER_CHOICE;
+                CheckDeath();     
                 break;
 
             case Phase.ENEMY_SWITCH:
