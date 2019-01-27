@@ -1,0 +1,18 @@
+<dialogue>
+	<prompt id = "root" text="RAM RANCH">
+		<option action = "prompt" prompt = "good">??????</option>
+		<option action = "prompt" prompt = "fight">18 COWBOYS</option>
+	</prompt>
+	<prompt id = "good" text="18 COWBOYS">
+		<option action = "exit">???</option>
+	</prompt>
+	<prompt id = "fight" text="BLACK FORD RAPTOR TRUCKS">
+		<option action = "battle">BIG HARD THROBBING</option>
+	</prompt>
+	<prompt id = "battle_won" text="RAMMMMMMM RANCH">
+		<option action = "exit">I'm Enlightened</option>
+	</prompt>
+	<prompt id = "battle_lost" text="SHOWER TIME">
+		<option action = "exit">Nah</option>
+	</prompt>
+</dialogue>

@@ -20,7 +20,7 @@ public class AIWaypoints : MonoBehaviour
 
     public float timePauseBeforeWalking = 1f;
     float timePause;
-    bool isWaiting = false;
+    public bool isWaiting = false;
 
     // Use this for initialization
     void Start()
@@ -43,6 +43,8 @@ public class AIWaypoints : MonoBehaviour
 
         Vector3 directionToTarget = targetWaypoint.position - transform.position;
         Quaternion rotationToTarget = Quaternion.LookRotation(directionToTarget);
+        if (GetComponent<DialogueHandler>().getIsInBattle())
+            isWaiting = true;   
         if (!isWaiting)
         {
             

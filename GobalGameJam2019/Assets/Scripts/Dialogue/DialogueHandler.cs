@@ -14,6 +14,7 @@ public class DialogueHandler : MonoBehaviour
     private IEnumerable<XElement> prompts;
     private XElement currentPrompt;
     private bool inDialogue = false;
+    private bool isInBattle = false;
 
     // Verify and load file
     void Start()
@@ -54,8 +55,10 @@ public class DialogueHandler : MonoBehaviour
                             break;
                         case "exit":
                             inDialogue = false;
+                            isInBattle = false;
                             break;
                         case "battle":
+                            isInBattle = true;
                             CameraSwitcher.UseArenaCamera();
                             GameObject player = GameObject.FindGameObjectWithTag("Player");
                             gameObject.tag = "Enemy";
@@ -70,6 +73,11 @@ public class DialogueHandler : MonoBehaviour
                 i++;
             }
         }
+    }
+
+    public bool getIsInBattle()
+    {
+        return isInBattle;
     }
 
     public void StartDialogue()
