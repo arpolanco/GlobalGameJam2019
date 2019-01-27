@@ -28,6 +28,7 @@ public class AIWaypoints : MonoBehaviour
         foreach(Transform t in origWay)
         {
             waypoints.Add(t);
+            t.GetComponent<MeshRenderer>().enabled = false;
         }
         timePause = timePauseBeforeWalking;
         lastWaypointIndex = waypoints.Count - 1;
